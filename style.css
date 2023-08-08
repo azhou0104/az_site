@@ -341,3 +341,28 @@ body, html {
     color: #c3dcdf;
     font-size: 1em;
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+  height: 150px;
+}
+
+td, th {
+  border: 1px solid #5d5d5d;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color:white;
+}
+
+td {
+  color: rgb(243, 243, 142);
+}
+
+tr {
+  background-color: #868686;
+}

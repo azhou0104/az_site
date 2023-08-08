@@ -89,25 +89,63 @@
     </div>
 
   </div>
-
-  <!-- <div class="flex-container">
-      <h1 id="about_header">hello, world</h1>
-        
-        <img src="./az_lisbon.jpg" id="about_pic"></img>
-
-        <div class="container"></div> -->
 </section>
 
 <div class="spacer layer_wave"></div>
 <section id="projects_screen">
-  <h1 id="proj_header">projects</h1>
+  <h1 id="proj_header" style="margin-top: -100px;">projects</h1>
   
 </section>
 
 <div class="spacer wave2"></div>
 
 <section id="travel_screen">
-  <h1 id="trav_header">My Travels</h1>
+  <h1 id="trav_header">my travels</h1>
+  <table>
+    <tr>
+      <th colspan="3" style="text-align: left; height: 8vh;">
+        <p> 
+          <img src="./plane.png" style="height:30px; display: inline-block;"/>
+          </h1 style="height:50px;"> Departures</h1> 
+      </p>
+      </th>
+    </tr>
+    <tr>
+      <th>Time</th>
+      <th>Destination</th>
+      <th>Gate</th>
+    </tr>
+    <tr>
+      <td>09:32</td>
+      <td>Seville, Spain</td>
+      <td>A12</td>
+    </tr>
+    <tr>
+      <td>9:40</td>
+      <td>Marrakech, Morocco</td>
+      <td>B14</td>
+    </tr>
+    <tr>
+      <td>10:15</td>
+      <td>Singapore</td>
+      <td>D14</td>
+    </tr>
+    <tr>
+      <td>11:20</td>
+      <td>Lisbon, Portugal</td>
+      <td>A5</td>
+    </tr>
+    <tr>
+      <td>14:28</td>
+      <td>Bali, Indonesia</td>
+      <td>E8</td>
+    </tr>
+    <tr>
+      <td>15:10</td>
+      <td>Paris, France</td>
+      <td>H12</td>
+    </tr>
+  </table>
 </section>
 
 </html>
@@ -164,9 +202,9 @@
 
   // Call the populateRow function and flip animation sequentially using Promises
   async function animateRowsSequentially() {
-    await populateRow('row1', ['M', 'A', 'N', 'G', 'O']);
+    await populateRow('row1', ['C', 'R', 'A', 'N', 'E']);
     await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
-    await populateRow('row2', ['A', 'S', 'P', 'E', 'N']);
+    await populateRow('row2', ['M', 'A', 'N', 'G', 'O']);
     await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
     await populateRow('row3', ['A', 'N', 'N', 'I', 'E']);
 
