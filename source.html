@@ -1,59 +1,126 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-      </head>
-      <div id="showcase">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap"
+    rel="stylesheet">
+
+
+</head>
+<section id="splash_screen">
+  <div class="row" id="row1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row" id="row2">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row" id="row3">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row" id="row4">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row" id="row5">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="row" id="row6">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <a href="#about_screen" id="arrow" class="arrow"></a>
+
+  <div class="wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+</section>
+<section id="about_screen">
+  <div class="container">
+    <div class="container-item header" style="font-size:x-large; font-family: 'Source Code Pro', monospace;
+    ">
+      <h1 id="about_header">hello, world</h1>
+    </div>
+    <div class="container-item">
+      <h1 id="about_description" style="text-align:justify;">
+        Hi, my name is Annie! I just graduated from the University of Michigan with a B.S. in Computer Science.
+      </h1>
+
+      <a href="./ZHOU_ANNIE.pdf" download="annie_zhou_resume"> <button class="resume_btn"> Resume</button></a>
+      <h1 id="about_description" style="padding-top:5vh; text-align:justify;">
+        I like Wordle and word games, rock climbing, playing piano, travelling (17 countries so far!), and of course,
+        coding stuff 😁
+      </h1>
+
+      <h1 id="about_trav_description" style="padding-top:6vh; text-align:justify;"> This pic was taken in Portugal -- see where else I've been!  <a href="#travel_screen"> <button class="go_btn"> Go </button></a> </h1> 
       
-        <div class="row" id="row1">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="row" id="row2">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="row" id="row3">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="row" id="row4">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="row" id="row5">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="row" id="row6">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
+
+
+    </div>
+    <div class="container-item">
+      <img src="./az_lisbon.jpg" id="about_pic"></img>
+    </div>
+
+  </div>
+
+  <!-- <div class="flex-container">
+      <h1 id="about_header">hello, world</h1>
+        
+        <img src="./az_lisbon.jpg" id="about_pic"></img>
+
+        <div class="container"></div> -->
+</section>
+
+<div class="spacer layer_wave"></div>
+<section id="projects_screen">
+  <h1 id="proj_header">projects</h1>
   
+</section>
+
+<div class="spacer wave2"></div>
+
+<section id="travel_screen">
+  <h1 id="trav_header">My Travels</h1>
+</section>
+
 </html>
 
 
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script>
+  function hide() {
+    let arrow = document.getElementById("arrow")
+    arrow.classList.add("hidden")
+  }
   async function flipLetters(rowId, letters) {
-    await new Promise(resolve => setTimeout(resolve, 200)); 
+    await new Promise(resolve => setTimeout(resolve, 200));
     const rowDiv = document.querySelector(`.row#${rowId}`);
     const divs = rowDiv.querySelectorAll('div');
     const word = ['A', 'N', 'N', 'I', 'E']
@@ -67,7 +134,7 @@
           div.classList.add('yellow');
         }
         div.classList.add('flip');
-      }, 500 * index); 
+      }, 400 * index);
     });
   }
 
@@ -98,11 +165,28 @@
   // Call the populateRow function and flip animation sequentially using Promises
   async function animateRowsSequentially() {
     await populateRow('row1', ['M', 'A', 'N', 'G', 'O']);
-    await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for animation to complete
+    await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
     await populateRow('row2', ['A', 'S', 'P', 'E', 'N']);
-    await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for animation to complete
+    await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
     await populateRow('row3', ['A', 'N', 'N', 'I', 'E']);
+
+    let arrow = document.getElementById("arrow")
+    arrow.classList.add("arrow_bounce")
+
   }
 
   animateRowsSequentially(); // Start the animation
+
+  var app = document.getElementById('about_header');
+
+  var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 60,
+    deleteSpeed: 5
+  });
+
+  typewriter.typeString('hello, world')
+    .pauseFor(2500)
+    .deleteAll()
+    .start();
 </script>
