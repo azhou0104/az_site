@@ -384,3 +384,12 @@ td {
 tr {
   background-color: #5d5b5b;
 }
+
+
+.trav_btn {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Set cursor to indicate interaction */
+    margin-top:5vh;
+}

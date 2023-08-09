@@ -1,10 +1,13 @@
 <html>
 
 <head>
+
+  <script src="https://kit.fontawesome.com/4d451af502.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/style.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap"
     rel="stylesheet">
+  />
 
 
 </head>
@@ -157,8 +160,12 @@
         </tr>
       </table>
 
-      <button onClick="showFlights('prev')">Back</button>
-      <button onClick="showFlights('next')">Next</button>
+      <button class="trav_btn" style="
+        margin-right: 5vh;" id="prev_btn" onClick="showFlights('prev')"><span id="prev_span" style="color:rgb(176, 176, 176)"><i id="prev_icon"
+            class="fa-solid fa-chevron-up fa-rotate-270 fa-2xl"></i></button></span>
+      <button class="trav_btn" style="margin-left:5vh;" id="next_btn" id="next_icon" onClick="showFlights('next')">
+        <span id="next_span" style="color:rgb(176, 176, 176)">
+          <i class="fa-solid fa-chevron-up fa-rotate-90 fa-2xl"></i></span></button>
     </div>
   </div>
 
@@ -170,7 +177,7 @@
 <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <script>
   const time_cells = document.querySelectorAll("td:first-child");
-  
+
   const dest_cells = document.querySelectorAll("td:nth-child(2)");
   console.log(dest_cells)
   const gate_cells = document.querySelectorAll("td:nth-child(3)");
@@ -205,6 +212,12 @@
   let table_index = 0;
 
 
+  const prev_btn = document.getElementById('prev_btn');
+  const next_btn = document.getElementById('next_btn');
+  const prev_icon = document.getElementById('prev_icon')
+  const next_icon = document.getElementById('next_icon')
+  const prev_span = document.getElementById('prev_span')
+  const next_span = document.getElementById('next_span');
   function showFlights(move) {
     if (move == "next") {
       ++table_index;
@@ -215,11 +228,25 @@
     if (cell_index >= locations_list[0].length) {
       cell_index = 0;
     }
+    if (table_index >= locations_list.length) {
+      table_index = locations_list.length - 1
+      next_btn.disabled = true;
+      next_span.style.color = "rgb(176, 176, 176)"
+
+    } 
+    else {
+      next_btn.disabled = false;
+      
+    }
     if (cell_index < 0) {
       cell_index = 0;
     }
     if (table_index < 0) {
       table_index = 0
+      prev_btn.disabled = true;
+      prev_span.style.color = "rgb(176, 176, 176)"
+    } else {
+      prev_btn.disabled = false;
     }
     time_cells.forEach((cell, index) => {
       cell.textContent = locations_list[table_index][cell_index].time;
@@ -236,41 +263,46 @@
         dest_cells[index].removeChild(dest_cells[index].firstChild);
         dest_cells[index].appendChild(link)
       }
-      // if (locations_list[table_index][cell_index].destination.includes('!')) {
-      //   const anchorElement = document.createElement('a');
-      //   anchorElement.href = './seville.html'; // Set the URL for the anchor
-      //   anchorElement.textContent = 'Seville, Spain';     // Set the 
-      //   dest_cells[index].removeChild(dest_cells[index].firstChild);
-      //   dest_cells[index].appendChild(anchorElement)
-      // } 
       else {
         dest_cells[index].textContent = locations_list[table_index][cell_index].destination;
       }
       gate_cells[index].textContent = locations_list[table_index][cell_index].gate;
       cell_index++;
     });
+    
   }
 
-  
+
+  prev_btn.addEventListener('mouseenter', () => {
+    console.log("prev" + prev_btn.disabled)
+    console.log("nex" + next_btn.disabled)
+    if (prev_btn.disabled == false) {
+      //dark
+      prev_span.style.color = "rgb(125, 123, 123)"
+    }
+  });
+
+  next_btn.addEventListener('mouseenter', () => {
+    console.log("prev" + prev_btn.disabled)
+    console.log("nex" + next_btn.disabled)
+    if (next_btn.disabled == false) {
+      //dark
+      next_span.style.color = "rgb(125, 123, 123)"
+    }
+  });
+
+  prev_btn.addEventListener('mouseleave', () => {
+    //light
+    prev_span.style.color = "rgb(176, 176, 176)"
+  });
+
+  next_btn.addEventListener('mouseleave', () => {
+    //light
+    next_span.style.color = "rgb(176, 176, 176)"
+  });
 
 
-  // dest = locations_list[table_index][cell_index].destination;
-  //     if (dest.includes('!')) {
-  //       const link = document.createElement('a');
 
-
-  //       city_name = dest.slice(1, inputString.indexOf(',')).trim();
-  //       city_country_name = dest.replace('!', '');
-
-  //       link.href = './' + city_name + '.html';
-  //       link.textContent = city_country_name;     // Set the 
-  //       dest_cells[index].removeChild(dest_cells[index].firstChild);
-  //       dest_cells[index].appendChild(anchorElement)
-  //     }
-  function hide() {
-    let arrow = document.getElementById("arrow")
-    arrow.classList.add("hidden")
-  }
   async function flipLetters(rowId, letters) {
     await new Promise(resolve => setTimeout(resolve, 200));
     const rowDiv = document.querySelector(`.row#${rowId}`);
