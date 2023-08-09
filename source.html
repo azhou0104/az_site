@@ -82,7 +82,7 @@
       </h1>
 
       <h1 id="about_trav_description" style="padding-top:6vh; text-align:justify;"> This pic was taken in Portugal --
-        see where else I've been! <a href="#travel_screen"> <button class="go_btn"> Go </button></a> </h1>
+        see where else I've been! <a href="#section-spacer"> <button class="go_btn"> Go </button></a> </h1>
 
 
 
@@ -101,14 +101,20 @@
 </section>
 
 <div class="spacer wave2"></div>
-
+<section id="section-spacer"></section>
 <section id="travel_screen">
   <div class="container2">
-    <div class="container-item header">
-      <h1 id="trav_header">my travels</h1>
+
+    <div class="container-item"></div>
+    <div class="container-item header2">
+      <h1 id="trav_header"> my travels </h1>
     </div>
-    <div class="container-item">
-      <table>
+
+
+    <div class="container-item"></div>
+
+    <div class="container-item container-item-table">
+      <table class="round-table">
         <tr>
           <th colspan="3" style="text-align: left; height: 8vh;">
             <div class="container-table">
@@ -129,45 +135,63 @@
         </tr>
         <tr>
           <td>9:32</td>
-          <td><a href="./seville.html"> Seville, Spain</a></td>
+          <td class="td-dest"><a href="./seville.html"> Seville, Spain</a></td>
           <td>A12</td>
         </tr>
         <tr>
           <td>9:40</td>
-          <td>Marrakech, Morocco</td>
+          <td class="td-dest">Marrakech, Morocco</td>
           <td>B14</td>
         </tr>
         <tr>
           <td>10:15</td>
-          <td>Singapore</td>
+          <td class="td-dest">Singapore</td>
           <td>D14</td>
         </tr>
         <tr>
           <td>11:20</td>
-          <td>Lisbon, Portugal</td>
+          <td class="td-dest">Lisbon, Portugal</td>
           <td>A5</td>
         </tr>
         <tr>
           <td>14:28</td>
-          <td>Bali, Indonesia</td>
+          <td class="td-dest">Bali, Indonesia</td>
           <td>E8</td>
         </tr>
         <tr>
           <td>15:10</td>
-          <td>Paris, France</td>
+          <td class="td-dest">Paris, France</td>
           <td>H12</td>
         </tr>
       </table>
 
       <button class="trav_btn" style="
-        margin-right: 5vh;" id="prev_btn" onClick="showFlights('prev')"><span id="prev_span" style="color:rgb(176, 176, 176)"><i id="prev_icon"
+        margin-right: 5vh;" id="prev_btn" onClick="showFlights('prev')"><span id="prev_span"
+          style="color:rgb(176, 176, 176)"><i id="prev_icon"
             class="fa-solid fa-chevron-up fa-rotate-270 fa-2xl"></i></button></span>
       <button class="trav_btn" style="margin-left:5vh;" id="next_btn" id="next_icon" onClick="showFlights('next')">
         <span id="next_span" style="color:rgb(176, 176, 176)">
           <i class="fa-solid fa-chevron-up fa-rotate-90 fa-2xl"></i></span></button>
     </div>
+    <div class="container-item">
+    </div>
+    <div class="container-item container-item-trav-description">
+      <h3 class="travel_txt">
+        I studied abroad in 2021 at the National University of Singapore (NUS), and have been hopping on and off flights ever since! I love travelling solo and exploring the sights and foods of each city. This flight departure board shows a selected subset of the places I've been. Hover over the different destinations and click to read my blog posts!
+      </h3>
+
+    </div>
+    <div class="container-item">
+
+    </div>
   </div>
 
+</section>
+<section id="footer" style="text-align:center; justify-content:center;  align-items: center;">
+  <div>
+    <br>
+    <p id="copyright" style="font-size: 20px;">Coded with ♡ by AZ</p>
+  </div>
 </section>
 
 </html>
@@ -201,7 +225,7 @@
       { time: "17:23", destination: "Honolulu, Hawaii", gate: "A14" },
       { time: "17:45", destination: "Vienna, Austria", gate: "A3" },
       { time: "18:00", destination: "Venice, Italy", gate: "I15" },
-      { time: "18:08", destination: "Zagreb, Crotia", gate: "B2" },
+      { time: "18:08", destination: "Zagreb, Croatia", gate: "B2" },
       { time: "18:10", destination: "Shanghai, China", gate: "C20" },
       { time: "19:15", destination: "Hanoi, Vietnam", gate: "H2" }
     ]
@@ -232,10 +256,10 @@
       next_btn.disabled = true;
       next_span.style.color = "rgb(176, 176, 176)"
 
-    } 
+    }
     else {
       next_btn.disabled = false;
-      
+
     }
     if (cell_index < 0) {
       cell_index = 0;
@@ -268,7 +292,7 @@
       gate_cells[index].textContent = locations_list[table_index][cell_index].gate;
       cell_index++;
     });
-    
+
   }
 
 

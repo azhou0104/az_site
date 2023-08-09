@@ -195,11 +195,16 @@ a:hover{
   min-height: 100vh;
   display: flex;
   /* background: rgb(159, 159, 224); */
-  background: #d5edc9;
+  /* background: #d5edc9; */
+  background: #efebdc;
   justify-content: center;
   text-align: center;
 }
 
+#section-spacer {
+  min-height:15vh;
+  background: #efebdc;
+}
 
 .wave {
   position: absolute;
@@ -263,26 +268,39 @@ a:hover{
 
 .container2 {
   display: grid;
-  grid-template-rows: 100px 500px 500px;
-  /* margin-top: -15vh; */
+  grid-template-rows: 100px 480px 200px 0px;
+  grid-template-columns: 100px 300px 300px 100px;
+  margin-top: -15vh;
   grid-row-gap:20px;
+  justify-content: center;
 }
 
 .container-table {
   display:grid;
   grid-template-columns: 50px 100px;
-}
-.container-item {
-  /* border: 1px solid #fff; */
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto; /* Center the container */
+  
 }
 
 .header {
   /* grid-area:header */
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.header2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.container-item-table {
+  grid-column-start: 2;
+  grid-column-end:4
+}
+
+.container-item-trav-description {
+  grid-column-start:1;
+  grid-column-end:5
 }
 
 
@@ -348,7 +366,8 @@ a:hover{
 }
 
 #trav_header {
-  color:#9b70cf;
+  /* color:#9b70cf; */
+  color: #7e9cce;
   font-size: 2.5em;
   letter-spacing: .22rem;
 }
@@ -361,9 +380,10 @@ a:hover{
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 500px;
-  height: 150px;
+  width: 600px;
+  height: 400px;
   letter-spacing: 0.17rem;
+  border-radius: 15px;
 }
 
 td, th {
@@ -379,12 +399,16 @@ th {
 
 td {
   color: rgb(243, 243, 142);
+  text-align: center;
 }
 
 tr {
   background-color: #5d5b5b;
 }
 
+.td-dest {
+  text-align:left;
+}
 
 .trav_btn {
     background: none; /* Remove background */
@@ -392,4 +416,45 @@ tr {
     padding: 0; /* Remove padding */
     cursor: pointer; /* Set cursor to indicate interaction */
     margin-top:5vh;
+}
+
+.travel_txt {
+  /* color:#9b70cf; */
+  color: #7e9cce;
+  margin-top:2vh;
+  font-weight: bold;
+  letter-spacing: .18rem;
+  text-align: justify;
+}
+
+.round-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px; /* Add this line for rounded corners */
+  overflow: hidden;
+}
+
+#footer {
+	height: 6em;
+	text-align: center;
+	background-color: #8cb995;
+}
+
+#social-container * {
+	padding: 6px;
+	margin-bottom: 6px;
+}
+
+#social-container a {
+	color: #ede7da;
+	transition: .4s;
+}
+
+#social-container a:hover {
+	color: #8d8d8d;
+}
+
+#copyright {
+	color: #ede7da;
+	font-size:14px;
 }
