@@ -56,7 +56,7 @@
 
   <a href="#about_screen" id="arrow" class="arrow"></a>
 
-  <div class="wave">
+  <div class="wave tracked-div">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path
         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
@@ -64,6 +64,7 @@
     </svg>
   </div>
 </section>
+<!-- <div class="spacer about_wave"></div> -->
 <section id="about_screen">
   <div class="container">
     <div class="container-item header" style="font-size:x-large; font-family: 'Source Code Pro', monospace;
@@ -83,9 +84,6 @@
 
       <h1 id="about_trav_description" style="padding-top:6vh; text-align:justify;"> This pic was taken in Portugal --
         see where else I've been! <a href="#section-spacer"> <button class="go_btn"> Go </button></a> </h1>
-
-
-
     </div>
     <div class="container-item">
       <img src="./az_lisbon.jpg" id="about_pic"></img>
@@ -103,19 +101,16 @@
 <div class="spacer wave2"></div>
 <section id="section-spacer">
 </section>
-<div id="clouds">
-  <div class="cloud x1"></div>
-  <div class="cloud x2"></div>
-  <div class="cloud x3"></div>
-  <div class="cloud x4"></div>
-  <div class="cloud x5"></div>
-</div>
+
+
+
 <section id="travel_screen">
+
   <div class="container2">
 
     <div class="container-item"></div>
     <div class="container-item header2">
-      <h1 id="trav_header"> my travels </h1>
+      <h1 id="trav_header"> travels </h1>
     </div>
 
 
@@ -183,10 +178,30 @@
     </div>
     <div class="container-item">
     </div>
+    <div class="container-item">
+    </div>
+    <div class="container-item" style="margin-top:-9vh;">
+
+      <div class="plane-container">
+        <a target="_blank">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304"
+            enable-background="new 0 0 1131.53 379.304" xml:space="preserve" class="plane">
+            <polygon fill="#D8D8D8"
+              points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  " />
+            <polygon fill="#C4C4C3" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   " />
+          </svg></a>
+
+      </div>
+    </div>
     <div class="container-item container-item-trav-description">
       <h3 class="travel_txt">
-        I studied abroad in 2021 at the National University of Singapore (NUS), and have been hopping on and off flights ever since! I love travelling solo and exploring the sights and foods of each city. This flight departure board shows a selected subset of the places I've been. Hover over the different destinations and click to read my blog posts!
+        I studied abroad in 2021 at the National University of Singapore (NUS), and have been hopping on and off flights
+        ever since! I love travelling solo and exploring the sights and foods of each city. This flight departure board
+        shows a selected subset of the places I've been. Hover over the different destinations and click to read my blog
+        posts!
       </h3>
+
 
     </div>
     <div class="container-item">
@@ -404,4 +419,30 @@
     .pauseFor(2500)
     .deleteAll()
     .start();
+
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  console.log("Viewport width: " + viewportWidth + "px");
+  console.log("Viewport height: " + viewportHeight + "px");
+
+  //   const trackedDiv = document.querySelector('.tracked-div');
+
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     if (entry.intersectionRatio > 0) {
+  //       // The tracked div is currently visible in the viewport
+  //       // Check if it has moved up by a certain amount of pixels
+  //       const deltaY = entry.boundingClientRect.y - entry.rootBounds.y;
+  //       if (deltaY < -2) { // Adjust the value as needed
+  //         // The div has moved up by at least 10 pixels
+  //         // You can perform some action here
+  //         console.log("The div has moved up by at least 10 pixels");
+  //         alert("hello")
+  //       }
+  //     }
+  //   });
+  // }, { threshold: [0, 1] }); // Observe both when the div is partially and fully visible
+
+  observer.observe(trackedDiv);
 </script>

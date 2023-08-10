@@ -8,6 +8,7 @@ body, html {
   scroll-behavior: smooth;
   /* font-family: 'Nunito', sans-serif; */
   /* font-family: 'Poppins', sans-serif; */
+ 
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -202,13 +203,15 @@ a:hover{
 }
 
 #section-spacer {
-  min-height:15vh;
+  min-height:25vh;
   background: #efebdc;
+  margin-top:-8vh;
+  z-index:2
 }
 
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom:0;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -226,6 +229,12 @@ a:hover{
 .wave .shape-fill {
   fill:  rgb(128,141,214);
 }
+
+@media screen and (max-width: 1100px) {
+  .wave {
+    bottom: -15;
+  }
+}
 .spacer {
   aspect-ratio: 960/300;
   width: 100%;
@@ -237,6 +246,7 @@ a:hover{
 .layer_wave {
   background-image: url('./svgs/layer_wave.svg')
 }
+
 
 #about_header, #about_description {
   color: #c3dcdf;
@@ -269,10 +279,11 @@ a:hover{
 .container2 {
   display: grid;
   grid-template-rows: 100px 480px 200px 0px;
-  grid-template-columns: 100px 300px 300px 100px;
-  margin-top: -15vh;
+  grid-template-columns: 150px 100px 300px 300px 100px 150px;
+  margin-top: -22vh;
   grid-row-gap:20px;
   justify-content: center;
+  position:relative;
 }
 
 .container-table {
@@ -289,18 +300,18 @@ a:hover{
 }
 
 .header2 {
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
 .container-item-table {
-  grid-column-start: 2;
-  grid-column-end:4
+  grid-column-start: 3;
+  grid-column-end:5;
 }
 
 .container-item-trav-description {
-  grid-column-start:1;
-  grid-column-end:5
+  grid-column-start:2;
+  grid-column-end:6;
 }
 
 
@@ -421,10 +432,11 @@ tr {
 .travel_txt {
   /* color:#9b70cf; */
   color: #7e9cce;
-  margin-top:2vh;
+  margin-top:3vh;
   font-weight: bold;
   letter-spacing: .18rem;
   text-align: justify;
+  z-index: 5;
 }
 
 .round-table {
@@ -460,118 +472,94 @@ tr {
 }
 
 
-#clouds{
-	/* padding: 100px 0; */
-	/* background:#efebdc; */
-  margin-top:-28vh;
-  position: absolute;
-  z-index: 2; /* Place the clouds behind the content */
+
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/*Time to finalise the cloud shape*/
-.cloud {
-	width: 200px; height: 60px;
-	background: #fff;
-	
-	border-radius: 200px;
-	-moz-border-radius: 200px;
-	-webkit-border-radius: 200px;
-	
-	position: relative; 
+/**
+ * Paper Plane
+ */
+/*Paper Plane: Container*/
+.plane-container {
+  
+  width: 200px;
+  margin: 10px ;
+  z-index: -1;
+}
+ /*Paper Plane: Image*/
+.plane {
+  width: 100%;
+  height: 60px;
+  z-index:-1;
+  opacity:60%;
 }
 
-.cloud:before, .cloud:after {
-	content: '';
-	position: absolute; 
-	background: #fff;
-	width: 100px; height: 80px;
-	position: absolute; top: -15px; left: 10px;
-	
-	border-radius: 100px;
-	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px;
-	
-	-webkit-transform: rotate(30deg);
-	transform: rotate(30deg);
-	-moz-transform: rotate(30deg);
+/*Paper Plane: Animation*/
+.plane-container {
+  -webkit-animation: paper-plane-scoping 2s alternate infinite;
+  -moz-animation: paper-plane-scoping 2s alternate infinite;
+  animation: paper-plane-scoping 2s alternate infinite;
+
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
-.cloud:after {
-	width: 120px; height: 120px;
-	top: -55px; left: auto; right: 15px;
+@-webkit-keyframes paper-plane-scoping {
+  0% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    transform: translateY(100px);
+  }
 }
 
-/*Time to animate*/
-.x1 {
-	-webkit-animation: moveclouds 15s linear infinite;
-	-moz-animation: moveclouds 15s linear infinite;
-	-o-animation: moveclouds 15s linear infinite;
+.plane {
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+
+  -webkit-animation: paper-plane-soaring 4s forwards infinite;
+  -moz-animation: paper-plane-soaring 4s forwards infinite;
+  animation: paper-plane-soaring 4s forwards infinite;
+}
+@-webkit-keyframes paper-plane-soaring {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  60% {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 }
 
-/*variable speed, opacity, and position of clouds for realistic effect*/
-.x2 {
-	left: 200px;
-	
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
-	opacity: 0.6; /*opacity proportional to the size*/
-	
-	/*Speed will also be proportional to the size and opacity*/
-	/*More the speed. Less the time in 's' = seconds*/
-	-webkit-animation: moveclouds 25s linear infinite;
-	-moz-animation: moveclouds 25s linear infinite;
-	-o-animation: moveclouds 25s linear infinite;
-}
-
-.x3 {
-	left: -250px; top: -200px;
-	
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
-	
-	-webkit-animation: moveclouds 20s linear infinite;
-	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
-}
-
-.x4 {
-	left: 470px; top: -250px;
-	
-	-webkit-transform: scale(0.75);
-	-moz-transform: scale(0.75);
-	transform: scale(0.75);
-	opacity: 0.75; /*opacity proportional to the size*/
-	
-	-webkit-animation: moveclouds 18s linear infinite;
-	-moz-animation: moveclouds 18s linear infinite;
-	-o-animation: moveclouds 18s linear infinite;
-}
-
-.x5 {
-	left: -150px; top: -150px;
-	
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	transform: scale(0.8);
-	opacity: 0.8; /*opacity proportional to the size*/
-	
-	-webkit-animation: moveclouds 20s linear infinite;
-	-moz-animation: moveclouds 20s linear infinite;
-	-o-animation: moveclouds 20s linear infinite;
-}
-
-@-webkit-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
-@-moz-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
-@-o-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
-}
