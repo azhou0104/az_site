@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Use the parent element's color */
+}
+
+a:hover{
+  color: #7e9cce;
+}
+
+.hidden {
+  display: none;
+}
+
+.container-item {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+

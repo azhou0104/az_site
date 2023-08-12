@@ -1,0 +1,197 @@
+.container2 {
+    display: grid;
+    grid-template-rows: 100px 480px 200px 0px;
+    grid-template-columns: 150px 100px 300px 300px 100px 150px;
+    margin-top: -22vh;
+    grid-row-gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+#travel_screen {
+    min-height: 100vh;
+    display: flex;
+    background: #efebdc;
+    justify-content: center;
+    text-align: center;
+}
+
+#trav_header {
+    color: #7e9cce;
+    font-size: 2.5em;
+    letter-spacing: .22rem;
+}
+
+.header2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+/* Container for flight departure board */
+.container-table {
+    display: grid;
+    grid-template-columns: 50px 100px;
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.container-item-table {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.container-item-trav-description {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+/* Table styling */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 600px;
+    height: 400px;
+    letter-spacing: 0.17rem;
+    border-radius: 15px;
+}
+
+td,
+th {
+    border: 1px solid #464646;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    color: white;
+    font-weight: normal;
+}
+
+td {
+    color: rgb(243, 243, 142);
+    text-align: center;
+}
+
+tr {
+    background-color: #5d5b5b;
+}
+
+.td-dest {
+    text-align: left;
+}
+
+.trav_btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 5vh;
+}
+
+.travel_txt {
+    color: #7e9cce;
+    margin-top: 3vh;
+    font-weight: bold;
+    letter-spacing: .18rem;
+    text-align: justify;
+    z-index: 5;
+}
+
+.round-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/**
+ * Paper Plane
+ */
+/*Paper Plane: Container*/
+.plane-container {
+
+    width: 200px;
+    margin: 10px;
+    z-index: -1;
+}
+
+/*Paper Plane: Image*/
+.plane {
+    width: 100%;
+    height: 60px;
+    z-index: -1;
+    opacity: 60%;
+}
+
+/*Paper Plane: Animation*/
+.plane-container {
+    -webkit-animation: paper-plane-scoping 2s alternate infinite;
+    -moz-animation: paper-plane-scoping 2s alternate infinite;
+    animation: paper-plane-scoping 2s alternate infinite;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes paper-plane-scoping {
+    0% {
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+
+    100% {
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+}
+
+.plane {
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+    -webkit-animation: paper-plane-soaring 4s forwards infinite;
+    -moz-animation: paper-plane-soaring 4s forwards infinite;
+    animation: paper-plane-soaring 4s forwards infinite;
+}
+
+@-webkit-keyframes paper-plane-soaring {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+    60% {
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+
+    70% {
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}

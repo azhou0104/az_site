@@ -3,15 +3,22 @@
 <head>
 
   <script src="https://kit.fontawesome.com/4d451af502.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/style.css">
+
+  <!--CSS STYLE SHEETS-->
+  <link rel="stylesheet" href="./assets/css/style.css">  
+  <link rel="stylesheet" href="./assets/css/style_splash.css">
+  <link rel="stylesheet" href="./assets/css/style_about.css">
+  <link rel="stylesheet" href="./assets/css/style_travel.css">
+  <link rel="stylesheet" href="./assets/css/style_proj.css">
+  <link rel="stylesheet" href="./assets/css/style_footer.css">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito&family=Open+Sans:wght@300&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap"
     rel="stylesheet">
-
 </head>
 
 <body>
-<!--HOME PAGE-->
+  <!--HOME PAGE-->
   <section id="splash_screen">
     <div class="row" id="row1">
       <div></div>
@@ -67,7 +74,7 @@
       </svg>
     </div>
   </section>
- 
+
   <!--ABOUT PAGE-->
   <section id="about_screen">
     <div class="container">
@@ -80,7 +87,7 @@
           Hi, my name is Annie! I just graduated from the University of Michigan with a B.S. in Computer Science.
         </h1>
 
-        <a href="./ZHOU_ANNIE.pdf" download="annie_zhou_resume"> <button class="resume_btn"> Resume</button></a>
+        <a href="./assets/ZHOU_ANNIE.pdf" download="annie_zhou_resume"> <button class="resume_btn"> Resume</button></a>
         <h1 id="about_description" style="padding-top:5vh; text-align:justify;">
           I like Wordle and word games, rock climbing, playing piano, travelling (17 countries so far!), and of course,
           coding stuff 😁
@@ -90,7 +97,7 @@
           see where else I've been! <a href="#section-spacer"> <button class="go_btn"> Go </button></a> </h1>
       </div>
       <div class="container-item">
-        <img src="./az_lisbon.jpg" id="about_pic"></img>
+        <img src="./assets/img/az_lisbon.jpg" id="about_pic"></img>
       </div>
     </div>
   </section>
@@ -166,7 +173,7 @@
 
       <!--Project 4-->
       <div class="container-item"> <button class="portfolio-link" id="portfolio_btn4">
-        <img src="./assets/img/arcade.png" alt="Arduino" height="350px"></button>
+          <img src="./assets/img/arcade.png" alt="Arduino" height="350px"></button>
         <div id="modal-portfolio4" class="modal">
 
           <div class="modal-content">
@@ -227,7 +234,7 @@
 
   <div class="spacer wave2"></div>
   <section id="section-spacer"></section>
- 
+
   <!--TRAVEL PAGE-->
   <section id="travel_screen">
 
@@ -247,7 +254,7 @@
             <th colspan="3" style="text-align: left; height: 8vh;">
               <div class="container-table">
                 <div class="container-item">
-                  <img src="./plane.png"
+                  <img src="./assets/img/plane.png"
                     style="height: 30px; display: inline-block; vertical-align: middle; margin-right: 10px;" />
                 </div>
                 <div class="container-item">
@@ -263,7 +270,7 @@
           </tr>
           <tr>
             <td>9:32</td>
-            <td class="td-dest"><a href="./seville.html"> Seville, Spain</a></td>
+            <td class="td-dest"><a href="./blog/seville.html"> Seville, Spain</a></td>
             <td>A12</td>
           </tr>
           <tr>
@@ -336,317 +343,34 @@
 
       </div>
     </div>
-
   </section>
+
+  <!--FOOTER-->
   <section id="footer" style="text-align:center; justify-content:center;  align-items: center;">
     <div style="margin-top:6vh;">
       <br>
       <p id="copyright" style="font-size: 20px;">Coded with ♡ by AZ</p>
     </div>
   </section>
-  <script src="./js/scripts.js"></script>
 
+  <!--Javascript scripts for animations and such-->
+  <script src="./js/script_flight_table.js"></script>
+  <script src="./js/script_wordle.js"></script>
+  <script src="./js/script_typewriter.js"></script>
+  <script src="./js/script_proj_modal.js"></script>
 
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js "></script>
+  <!--For the typewriter-->
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+  <!--Shows screensize, for debugging-->
   <script>
-
-    const time_cells = document.querySelectorAll("td:first-child");
-
-    const dest_cells = document.querySelectorAll("td:nth-child(2)");
-    console.log(dest_cells)
-    const gate_cells = document.querySelectorAll("td:nth-child(3)");
-    const locations_list = [
-      [
-        { time: "9:32", destination: "!Seville, Spain", gate: "A12" },
-        { time: "9:40", destination: "Marrakech, Morocco", gate: "B14" },
-        { time: "10:15", destination: "Singapore", gate: "D14" },
-        { time: "11:20", destination: "Lisbon, Portugal", gate: "A5" },
-        { time: "14:28", destination: "Bali, Indonesia", gate: "E8" },
-        { time: "15:10", destination: "Paris, France", gate: "H12" }
-      ],
-      [
-        { time: "15:23", destination: "Phuket, Thailand", gate: "C5" },
-        { time: "16:30", destination: "Madrid, Spain", gate: "D1" },
-        { time: "16:42", destination: "Porto, Portugal", gate: "D12" },
-        { time: "16:55", destination: "Athens, Greece", gate: "H6" },
-        { time: "17:03", destination: "Genoa, Italy", gate: "C12" },
-        { time: "17:12", destination: "Ljubljana, Slovenia", gate: "B2" }
-      ],
-      [
-        { time: "17:23", destination: "Honolulu, Hawaii", gate: "A14" },
-        { time: "17:45", destination: "Vienna, Austria", gate: "A3" },
-        { time: "18:00", destination: "Venice, Italy", gate: "I15" },
-        { time: "18:08", destination: "Zagreb, Croatia", gate: "B2" },
-        { time: "18:10", destination: "Shanghai, China", gate: "C20" },
-        { time: "19:15", destination: "Hanoi, Vietnam", gate: "H2" }
-      ]
-
-    ];
-    let cell_index = 0;
-    let table_index = 0;
-
-
-    const prev_btn = document.getElementById('prev_btn');
-    const next_btn = document.getElementById('next_btn');
-    const prev_icon = document.getElementById('prev_icon')
-    const next_icon = document.getElementById('next_icon')
-    const prev_span = document.getElementById('prev_span')
-    const next_span = document.getElementById('next_span');
-    function showFlights(move) {
-      if (move == "next") {
-        ++table_index;
-      }
-      else {
-        --table_index;
-      }
-      if (cell_index >= locations_list[0].length) {
-        cell_index = 0;
-      }
-      if (table_index >= locations_list.length) {
-        table_index = locations_list.length - 1
-        next_btn.disabled = true;
-        next_span.style.color = "rgb(176, 176, 176)"
-
-      }
-      else {
-        next_btn.disabled = false;
-
-      }
-      if (cell_index < 0) {
-        cell_index = 0;
-      }
-      if (table_index < 0) {
-        table_index = 0
-        prev_btn.disabled = true;
-        prev_span.style.color = "rgb(176, 176, 176)"
-      } else {
-        prev_btn.disabled = false;
-      }
-      time_cells.forEach((cell, index) => {
-        cell.textContent = locations_list[table_index][cell_index].time;
-        dest = locations_list[table_index][cell_index].destination;
-        if (dest.includes('!')) {
-          const link = document.createElement('a');
-
-
-          city_name = dest.slice(1, dest.indexOf(',')).trim();
-          city_country_name = dest.replace('!', '');
-          console.log(city_country_name);
-          link.href = './' + city_name + '.html';
-          link.textContent = city_country_name;     // Set the 
-          dest_cells[index].removeChild(dest_cells[index].firstChild);
-          dest_cells[index].appendChild(link)
-        }
-        else {
-          dest_cells[index].textContent = locations_list[table_index][cell_index].destination;
-        }
-        gate_cells[index].textContent = locations_list[table_index][cell_index].gate;
-        cell_index++;
-      });
-
-    }
-
-
-    prev_btn.addEventListener('mouseenter', () => {
-      console.log("prev" + prev_btn.disabled)
-      console.log("nex" + next_btn.disabled)
-      if (prev_btn.disabled == false) {
-        //dark
-        prev_span.style.color = "rgb(125, 123, 123)"
-      }
-    });
-
-    next_btn.addEventListener('mouseenter', () => {
-      console.log("prev" + prev_btn.disabled)
-      console.log("nex" + next_btn.disabled)
-      if (next_btn.disabled == false) {
-        //dark
-        next_span.style.color = "rgb(125, 123, 123)"
-      }
-    });
-
-    prev_btn.addEventListener('mouseleave', () => {
-      //light
-      prev_span.style.color = "rgb(176, 176, 176)"
-    });
-
-    next_btn.addEventListener('mouseleave', () => {
-      //light
-      next_span.style.color = "rgb(176, 176, 176)"
-    });
-
-
-
-    async function flipLetters(rowId, letters) {
-      await new Promise(resolve => setTimeout(resolve, 200));
-      const rowDiv = document.querySelector(`.row#${rowId}`);
-      const divs = rowDiv.querySelectorAll('div');
-      const word = ['A', 'N', 'N', 'I', 'E']
-      // Apply flip animation class with delay
-      divs.forEach((div, index) => {
-        setTimeout(() => {
-          if (letters[index] == word[index]) {
-            div.classList.add('green');
-          }
-          else if (letters[index] != word[index] && word.includes(letters[index])) {
-            div.classList.add('yellow');
-          }
-          div.classList.add('flip');
-        }, 400 * index);
-      });
-    }
-
-    function populateRow(rowId, letters) {
-      return new Promise(resolve => {
-        const rowDiv = document.querySelector(`.row#${rowId}`);
-        const emptyDivs = rowDiv.querySelectorAll('div:empty');
-        let index = 0;
-
-        async function addLetterWithDelay() {
-          if (index < emptyDivs.length) {
-            await new Promise(resolve => setTimeout(resolve, 200)); // 200 milliseconds delay
-            emptyDivs[index].textContent = letters[index];
-            index++;
-            await addLetterWithDelay();
-          } else {
-            resolve(); // Resolve the promise when animation is complete
-          }
-        }
-
-        addLetterWithDelay().then(() => {
-          flipLetters(rowId, letters); // Add flip animation after letters are populated
-          resolve(); // Resolve the outer promise
-        });
-      });
-    }
-
-    // Call the populateRow function and flip animation sequentially using Promises
-    async function animateRowsSequentially() {
-      await populateRow('row1', ['C', 'R', 'A', 'N', 'E']);
-      await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
-      await populateRow('row2', ['M', 'A', 'N', 'G', 'O']);
-      await new Promise(resolve => setTimeout(resolve, 2500)); // Wait for animation to complete
-      await populateRow('row3', ['A', 'N', 'N', 'I', 'E']);
-
-      let arrow = document.getElementById("arrow")
-      arrow.classList.add("arrow_bounce")
-
-    }
-
-    animateRowsSequentially(); // Start the animation
-
-    var app = document.getElementById('about_header');
-
-    var typewriter = new Typewriter(app, {
-      loop: true,
-      delay: 60,
-      deleteSpeed: 5
-    });
-
-    typewriter.typeString('hello, world')
-      .pauseFor(2500)
-      .deleteAll()
-      .start();
-
-    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
     console.log("Viewport width: " + viewportWidth + "px");
     console.log("Viewport height: " + viewportHeight + "px");
-
-
-
     observer.observe(trackedDiv);
   </script>
-  <script>
-    // Get the modal
-    var modal1 = document.getElementById("modal-portfolio1");
-    var modal2 = document.getElementById("modal-portfolio2");
-    var modal3 = document.getElementById("modal-portfolio3");
-    var modal4 = document.getElementById("modal-portfolio4");
-    var modal5 = document.getElementById("modal-portfolio5");
-    var modal6 = document.getElementById("modal-portfolio6");
 
-    // Get the button that opens the modal
-    var btn1 = document.getElementById("portfolio_btn1");
-    var btn2 = document.getElementById("portfolio_btn2");
-    var btn3 = document.getElementById("portfolio_btn3");
-    var btn4 = document.getElementById("portfolio_btn4");
-    var btn5 = document.getElementById("portfolio_btn5");
-    var btn6 = document.getElementById("portfolio_btn6");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    var span2 = document.getElementsByClassName("close")[1];
-    var span3 = document.getElementsByClassName("close")[2];
-    var span4 = document.getElementsByClassName("close")[3];
-    var span5 = document.getElementsByClassName("close")[4];
-    var span6 = document.getElementsByClassName("close")[5];
-
-    // When the user clicks the button, open the modal 
-    btn1.onclick = function () {
-      modal1.style.display = "block";
-    }
-    btn2.onclick = function () {
-      modal2.style.display = "block";
-    }
-    btn3.onclick = function () {
-      modal3.style.display = "block";
-    }
-    btn4.onclick = function () {
-      modal4.style.display = "block";
-    }
-    btn5.onclick = function () {
-      modal5.style.display = "block";
-    }
-    btn6.onclick = function () {
-      modal6.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal1.style.display = "none";
-    }
-    span2.onclick = function () {
-      modal2.style.display = "none";
-    }
-    span3.onclick = function () {
-      modal3.style.display = "none";
-    }
-    span4.onclick = function () {
-      modal4.style.display = "none";
-    }
-    span5.onclick = function () {
-      modal5.style.display = "none";
-    }
-    span6.onclick = function () {
-      modal6.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal1) {
-        modal1.style.display = "none";
-      }
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-      if (event.target == modal3) {
-        modal3.style.display = "none";
-      }
-      if (event.target == modal4) {
-        modal4.style.display = "none";
-      }
-      if (event.target == modal5) {
-        modal5.style.display = "none";
-      }
-      if (event.target == modal6) {
-        modal6.style.display = "none";
-      }
-    }
-  </script>
 </body>
 
 </html>
