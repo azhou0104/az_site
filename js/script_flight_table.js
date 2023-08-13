@@ -6,7 +6,7 @@ const gate_cells = document.querySelectorAll("td:nth-child(3)");
 const locations_list = [
   [
     { time: "9:32", destination: "!Seville, Spain", gate: "A12" },
-    { time: "9:40", destination: "Marrakech, Morocco", gate: "B14" },
+    { time: "9:40", destination: "!Marrakech, Morocco", gate: "B14" },
     { time: "10:15", destination: "Singapore", gate: "D14" },
     { time: "11:20", destination: "Lisbon, Portugal", gate: "A5" },
     { time: "14:28", destination: "Bali, Indonesia", gate: "E8" },

@@ -164,7 +164,7 @@
   /*For page reponsiveness to resizing */
   @media screen and (max-width: 1240px) {
     .wave {
-      bottom: -15;
+      bottom:0;
     }
   }
   

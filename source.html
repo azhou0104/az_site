@@ -275,7 +275,7 @@
           </tr>
           <tr>
             <td>9:40</td>
-            <td class="td-dest">Marrakech, Morocco</td>
+            <td class="td-dest"><a href="./blog/marrakech.html"> Marrakech, Morocco</a></td>
             <td>B14</td>
           </tr>
           <tr>
@@ -356,11 +356,23 @@
   <!--Javascript scripts for animations and such-->
   <script src="./js/script_flight_table.js"></script>
   <script src="./js/script_wordle.js"></script>
-  <script src="./js/script_typewriter.js"></script>
   <script src="./js/script_proj_modal.js"></script>
 
   <!--For the typewriter-->
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script>
+  var app = document.getElementById('about_header');
+
+    var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 60,
+        deleteSpeed: 5
+    });
+    
+    typewriter.typeString('hello, world')
+        .pauseFor(2500)
+        .deleteAll()
+        .start();</script>
 
   <!--Shows screensize, for debugging-->
   <script>
