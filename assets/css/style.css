@@ -34,5 +34,16 @@ svg {
   display: block;
 }
 
+/* .row {
+  border: 1px solid black;
+}
+
+.col {
+  border: 1px solid black;
+} */
 
 
+.container {
+  position: relative;
+  width: 70%
+}

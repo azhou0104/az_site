@@ -3,9 +3,19 @@
 <head>
 
   <script src="https://kit.fontawesome.com/4d451af502.js" crossorigin="anonymous"></script>
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--SEO meta tags-->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <!--    Change the index to your website's name-->
+  <title>Zannie </title>
+  <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
   <!--CSS STYLE SHEETS-->
-  <link rel="stylesheet" href="./assets/css/style.css">  
+  <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/style_splash.css">
   <link rel="stylesheet" href="./assets/css/style_about.css">
   <link rel="stylesheet" href="./assets/css/style_travel.css">
@@ -20,42 +30,42 @@
 <body>
   <!--HOME PAGE-->
   <section id="splash_screen">
-    <div class="row" id="row1">
+    <div class="rows" id="row1">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="row" id="row2">
+    <div class="rows" id="row2">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="row" id="row3">
+    <div class="rows" id="row3">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="row" id="row4">
+    <div class="rows" id="row4">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="row" id="row5">
+    <div class="rows" id="row5">
       <div></div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <div class="row" id="row6">
+    <div class="rows" id="row6">
       <div></div>
       <div></div>
       <div></div>
@@ -77,27 +87,27 @@
 
   <!--ABOUT PAGE-->
   <section id="about_screen">
-    <div class="container">
-      <div class="container-item header" style="font-size:x-large; font-family: 'Source Code Pro', monospace;
-    ">
-        <h1 id="about_header">hello, world</h1>
-      </div>
-      <div class="container-item">
-        <h1 id="about_description" style="text-align:justify;">
-          Hi, my name is Annie! I just graduated from the University of Michigan with a B.S. in Computer Science.
-        </h1>
-
-        <a href="./assets/ZHOU_ANNIE.pdf" download="annie_zhou_resume"> <button class="resume_btn"> Resume</button></a>
-        <h1 id="about_description" style="padding-top:5vh; text-align:justify;">
-          I like Wordle and word games, rock climbing, playing piano, travelling (17 countries so far!), and of course,
-          coding stuff 😁
-        </h1>
-
-        <h1 id="about_trav_description" style="padding-top:6vh; text-align:justify;"> This pic was taken in Portugal --
-          see where else I've been! <a href="#section-spacer"> <button class="go_btn"> Go </button></a> </h1>
-      </div>
-      <div class="container-item">
-        <img src="./assets/img/az_lisbon.jpg" id="about_pic"></img>
+    <div class="container-fluid container-about" style="margin-top: -10vh;">
+      <div class="row justify-content-center">
+        <h1 id="about_header" style="margin-bottom: 8vh;">hello, world</h1>
+      <div class="row">
+        <div class="col">
+          <h1 id="about_description" style="text-align:justify;">
+            Hi, my name is Annie! I just graduated from the University of Michigan with a B.S. in Computer Science.
+          </h1>
+  
+          <a href="./assets/ZHOU_ANNIE.pdf" download="annie_zhou_resume"> <button class="resume_btn"> Resume</button></a>
+          <h1 id="about_description" style="padding-top:5vh; text-align:justify;">
+            I like Wordle and word games, rock climbing, playing piano, travelling (17 countries so far!), and of course,
+            coding stuff 😁
+          </h1>
+  
+          <h1 id="about_trav_description" style="padding-top:6vh; text-align:justify;"> This pic was taken in Portugal --
+            see where else I've been! <a href="#section-spacer"> <button class="go_btn"> Go </button></a> </h1>
+        </div>
+        <div class="col">
+          <img src="./assets/img/az_lisbon.jpg" id="about_pic" >
+        </div>
       </div>
     </div>
   </section>
@@ -106,123 +116,129 @@
 
   <!--PROJECTS PAGE-->
   <section id="projects_screen">
-    <div class="container3">
-      <div class="container-item header3">
+    <div class="container-fluid container-proj" style="margin-top: -10vh;">
+      <!-- <h1 id="proj_header">projects</h1> -->
+      <div class="row justify-content-center" style="margin-bottom:6vh;">
         <h1 id="proj_header">projects</h1>
       </div>
-
-      <!--Project 1-->
-      <div class="container-item">
-        <button class="portfolio-link" id="portfolio_btn1">
-          <img src="./assets/img/arcade.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio1" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/arcade.png" alt="Arduino" height="400px">
+      <div class="row justify-content-center" style="margin-bottom: 15vh">
+        <!--Project1-->
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn1">
+            <img src="./assets/img/arcade.png" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio1" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="350px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
-              <div class="container-item">
-                text
+            </div>
+          </div>
+        </div>
+
+        <!--Project2-->
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn2"> <!-- Changed id to portfolio_btn2 -->
+            <img src="./assets/img/arcade.png" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio2" class="modal"> <!-- Changed id to modal-portfolio2 -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="350px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <!--Project 2-->
-      <div class="container-item">
-        <button class="portfolio-link" id="portfolio_btn2">
-          <img src="./assets/img/cheers.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio2" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/cheers.png" alt="Arduino" height="400px">
-              </div>
-              <div class="container-item">
-                text
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Project 3-->
-      <div class="container-item"> <button class="portfolio-link" id="portfolio_btn3">
-          <img src="./assets/img/tsp.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio3" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/tsp.png" alt="Arduino" height="400px">
-              </div>
-              <div class="container-item">
-                text
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Project 4-->
-      <div class="container-item"> <button class="portfolio-link" id="portfolio_btn4">
-          <img src="./assets/img/arcade.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio4" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/arcade.png" alt="Arduino" height="400px">
-              </div>
-              <div class="container-item">
-                text
+        <!--Project3-->
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn3"> <!-- Changed id to portfolio_btn3 -->
+            <img src="./assets/img/arcade.png" alt="Arduino" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio3" class="modal"> <!-- Changed id to modal-portfolio3 -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="350px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!--Project 5-->
-      <div class="container-item">
-        <button class="portfolio-link" id="portfolio_btn5">
-          <img src="./assets/img/mask.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio5" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/mask.png" alt="Arduino" height="400px">
-              </div>
-              <div class="container-item">
-                text
+      <!--Project4-->
+      <div class="row mb-5 justify-content-center">
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn4">
+            <img src="./assets/img/arcade.png" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio4" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="350px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!--Project 6-->
-      <div class="container-item"> <button class="portfolio-link" id="portfolio_btn6">
-          <img src="./assets/img/arcade.png" alt="Arduino" height="350px"></button>
-        <div id="modal-portfolio6" class="modal">
-
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="container-modal">
-              <div class="container-item">
-                <img class="img-fluid" src="./assets/img/arcade.png" alt="Arduino" height="400px">
+        <!--Project5-->
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn5"> <!-- Changed id to portfolio_btn2 -->
+            <img src="./assets/img/arcade.png" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio5" class="modal"> <!-- Changed id to modal-portfolio2 -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="250px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
-              <div class="container-item">
-                text
+            </div>
+          </div>
+        </div>
+
+        <!--Project6-->
+        <div class="col">
+          <button class="portfolio-link" id="portfolio_btn6"> <!-- Changed id to portfolio_btn3 -->
+            <img src="./assets/img/arcade.png" alt="Arduino" style="max-height:300px" class="img-fluid">
+          </button>
+          <div id="modal-portfolio6" class="modal"> <!-- Changed id to modal-portfolio3 -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="container-modal">
+                <div class="container-item">
+                  <img class="img-fluid" src="./assets/img/arcade.png" max-height="350px" class="img-fluid">
+                </div>
+                <div class="container-item">
+                  text
+                </div>
               </div>
             </div>
           </div>
@@ -361,18 +377,18 @@
   <!--For the typewriter-->
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script>
-  var app = document.getElementById('about_header');
+    var app = document.getElementById('about_header');
 
     var typewriter = new Typewriter(app, {
-        loop: true,
-        delay: 60,
-        deleteSpeed: 5
+      loop: true,
+      delay: 60,
+      deleteSpeed: 5
     });
-    
+
     typewriter.typeString('hello, world')
-        .pauseFor(2500)
-        .deleteAll()
-        .start();</script>
+      .pauseFor(2500)
+      .deleteAll()
+      .start();</script>
 
   <!--Shows screensize, for debugging-->
   <script>

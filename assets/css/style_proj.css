@@ -1,9 +1,10 @@
 #projects_screen {
     min-height: 100vh;
-    display: flex;
+    /* display: flex; */
     background: #e3d8de;
     justify-content: center;
     text-align: center;
+    align-content:center;
 
 }
 
@@ -173,4 +174,7 @@ content area .portfolio-modal {
     height: 70%;
   }
   
-  
+  .container-proj {
+    max-width: 80%; /* Set your desired maximum width */
+    margin: 0 auto; 
+  }

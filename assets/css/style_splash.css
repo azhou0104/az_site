@@ -33,13 +33,13 @@
 }
 
 /* Wordle rows */
-.row {
+.rows {
     text-align: center;
     display: flex;
     justify-content: center;
 }
 
-.row>div {
+.rows>div {
     display: block;
     width: 60px;
     height: 60px;
@@ -55,24 +55,24 @@
 
 }
 
-.row>div.green {
+.rows>div.green {
     background: #5ac85a;
     border-color: #5ac85a;
 }
 
-.row>div.yellow {
+.rows>div.yellow {
     background: #e2cc68;
     border-color: #e2cc68;
 }
 
-.row>div.grey {
+.rows>div.grey {
     background: #a1a1a1;
     border-color: #a1a1a1;
 }
 
 
 /* Row flipping animations */
-.row>div.flip {
+.rows>div.flip {
     animation: flip 0.75s ease forwards;
 }
 

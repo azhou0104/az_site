@@ -1,6 +1,6 @@
 async function flipLetters(rowId, letters) {
     await new Promise(resolve => setTimeout(resolve, 200));
-    const rowDiv = document.querySelector(`.row#${rowId}`);
+    const rowDiv = document.querySelector(`.rows#${rowId}`);
     const divs = rowDiv.querySelectorAll('div');
     const word = ['A', 'N', 'N', 'I', 'E']
     // Apply flip animation class with delay
@@ -19,7 +19,7 @@ async function flipLetters(rowId, letters) {
 
   function populateRow(rowId, letters) {
     return new Promise(resolve => {
-      const rowDiv = document.querySelector(`.row#${rowId}`);
+      const rowDiv = document.querySelector(`.rows#${rowId}`);
       const emptyDivs = rowDiv.querySelectorAll('div:empty');
       let index = 0;
 
