@@ -9,14 +9,14 @@ body, html {
   font-family: 'Open Sans', sans-serif;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: inherit; /* Use the parent element's color */
-}
+/* } */
 
 a:hover{
   color: #7e9cce;
-}
+} */
 
 .hidden {
   display: none;
@@ -28,11 +28,11 @@ a:hover{
   align-items: center;
 }
 
-svg {
+/* svg {
   max-width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 /* .row {
   border: 1px solid black;
@@ -43,7 +43,7 @@ svg {
 } */
 
 
-.container {
+/* .container {
   position: relative;
   width: 70%
-}
+} */

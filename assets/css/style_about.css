@@ -12,6 +12,7 @@
    
 }
 
+
 .resume_btn {
     font-size: 1rem;
     letter-spacing: .1rem;
@@ -51,4 +52,8 @@
 #about_trav_description {
     color: #c3dcdf;
     font-size: 1em;
+}
+
+.layer_wave {
+    background-image: url('../svgs/layer_wave.svg');
 }

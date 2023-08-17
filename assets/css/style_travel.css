@@ -1,20 +1,25 @@
-.container2 {
-    display: grid;
-    grid-template-rows: 100px 480px 200px 0px;
-    grid-template-columns: 150px 100px 300px 300px 100px 150px;
-    /* margin-top: -22vh; */
-    grid-row-gap: 20px;
+a {
+    text-decoration: none;
+    color: inherit; /* Use the parent element's color */
+  }
+  
+  a:hover{
+    color: #7e9cce;
+  }
+  
+
+#trav_screen {
+    min-height: 100vh;
     justify-content: center;
-    position: relative;
+    align-items: center;
+    text-align: center;
+    background: #efebdc;
+    display:flex;
+
+    /*Font*/
+    font-family: 'Open Sans', sans-serif;
 }
 
-#travel_screen {
-    min-height: 100vh;
-    display: flex;
-    background: #efebdc;
-    justify-content: center;
-    text-align: center;
-}
 
 #trav_header {
     color: #7e9cce;
@@ -22,30 +27,17 @@
     letter-spacing: .22rem;
 }
 
-.header2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
+/*table and such */
+.table-bordered {
+    border: pink;
 }
 
-/* Container for flight departure board */
-.container-table {
-    display: grid;
-    grid-template-columns: 50px 100px;
-    margin: 0 auto;
-    /* Center the container */
+.round-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px !important;
+    overflow: hidden;
 }
-
-.container-item-table {
-    grid-column-start: 3;
-    grid-column-end: 5;
-}
-
-.container-item-trav-description {
-    grid-column-start: 2;
-    grid-column-end: 6;
-}
-
-/* Table styling */
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -57,9 +49,10 @@ table {
 
 td,
 th {
-    border: 1px solid #464646;
+    border: 1px solid #464646 !important;
     text-align: left;
     padding: 8px;
+    margin: 0; /* Add this line to remove the margin */
 }
 
 th {
@@ -90,18 +83,25 @@ tr {
 
 .travel_txt {
     color: #7e9cce;
-    margin-top: 3vh;
+    margin-top: 4vh;
     font-weight: bold;
     letter-spacing: .18rem;
-    text-align: justify;
+    text-align: left;
     z-index: 5;
+    font-size: 1.2em;
+    margin-left: 20px;
 }
 
-.round-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 15px;
-    overflow: hidden;
+.trav_btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+/*removes blue box when btn is clicked */
+.trav_btn:focus {
+    outline:none
 }
 
 /**
