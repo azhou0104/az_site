@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: 100px 480px 200px 0px;
     grid-template-columns: 150px 100px 300px 300px 100px 150px;
-    margin-top: -22vh;
+    /* margin-top: -22vh; */
     grid-row-gap: 20px;
     justify-content: center;
     position: relative;

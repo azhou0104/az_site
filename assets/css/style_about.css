@@ -1,50 +1,17 @@
 #about_screen {
     min-height: 100vh;
-    display: flex;
-    background: rgb(128, 141, 214);
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     text-align: center;
-}
+    background: rgb(128, 141, 214);
+    display:flex;
 
-/*Container for about screen */
-.container {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: 100px 500px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-
-}
-
-#about_header,
-#about_description {
+    /*Font*/
+    font-family: 'Open Sans', sans-serif;
     color: #c3dcdf;
-
+   
 }
 
-#about_description {
-    font-size:1.5em;
-}
-#about_pic {
-    height: 450px;
-}
-
-
-#about_trav_description {
-    color: #c3dcdf;
-    font-size: 1em;
-}
-
-
-.header {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-  
-
-/* Styling for button to retrieve resume */
 .resume_btn {
     font-size: 1rem;
     letter-spacing: .1rem;
@@ -78,12 +45,10 @@
     margin-left: 0.7rem;
 }
 
-/*svg for multi-layer wave*/
-.layer_wave {
-    background-image: url('../svgs/layer_wave.svg')
+#about_text {
+    font-size:1.5em;
 }
-
-.container-about {
-    max-width: 70%; /* Set your desired maximum width */
-    margin: 0 auto; 
-  }
+#about_trav_description {
+    color: #c3dcdf;
+    font-size: 1em;
+}

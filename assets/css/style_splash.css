@@ -139,7 +139,7 @@
     }
 }
 
-/* Wave spacer */
+/* Wave spacer
 .wave {
     position: absolute;
     bottom:0;
@@ -162,9 +162,9 @@
   }
   
   /*For page reponsiveness to resizing */
-  @media screen and (max-width: 1240px) {
+  /* @media screen and (max-width: 1240px) {
     .wave {
       bottom:0;
     }
-  }
+  } */ 
   

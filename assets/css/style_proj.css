@@ -14,7 +14,7 @@
     grid-template-columns: 400px 400px 400px;
     grid-row-gap: 20px;
     justify-content: center;
-    margin-top: -8vh;
+    /* margin-top: -8vh; */
     position: relative;
 }
 
@@ -35,7 +35,7 @@
 #section-spacer {
     min-height: 25vh;
     background: #efebdc;
-    margin-top: -8vh;
+    /* margin-top: -8vh; */
     z-index: 2
 }
 
@@ -117,7 +117,7 @@ content area .portfolio-modal {
     background-color: #fefefe;
     margin: 10% auto;
     /* 15% from the top and centered */
-    padding: 100px;
+    padding: 80px;
     border: 1px solid #888;
     width: 60%;
     /* Could be more or less, depending on screen size */
@@ -149,7 +149,7 @@ content area .portfolio-modal {
   
   .portfolio-link img {
     transition: transform 0.6s ease;
-    border-radius: 25px;
+    border-radius: 15px;
   }
   
   .portfolio-link+h4 {
@@ -177,4 +177,12 @@ content area .portfolio-modal {
   .container-proj {
     max-width: 80%; /* Set your desired maximum width */
     margin: 0 auto; 
+  }
+
+  .modal-header {
+    color: purple;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-right: 2rem;
+    border-bottom: none;
   }
