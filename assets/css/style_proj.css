@@ -4,6 +4,7 @@
     background: #e3d8de;
     justify-content: center;
     text-align: center;
+    margin-top: -1px;
 
 }
 
@@ -45,6 +46,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-top: -1px;
 }
 
 
