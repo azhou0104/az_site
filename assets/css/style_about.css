@@ -57,11 +57,3 @@
 .layer_wave {
     background-image: url('../svgs/layer_wave.svg');
 }
-
-.spacer {
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
