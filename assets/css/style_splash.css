@@ -162,11 +162,27 @@
   }
   
   /*For page reponsiveness to resizing */
-  /* @media screen and (max-width: 1240px) {
-    .wave {
-      bottom:0;
+   @media screen and (max-height: 650px) {
+    #arrow {
+      display:none;
     }
-  } */ 
+  } 
+
+   @media screen and (max-height: 300px) {
+    #row4 {
+        display:none;
+    }
+  } 
+  @media screen and (max-height: 350px) {
+    #row5 {
+        display:none;
+    }
+  }  
+  @media screen and (max-height: 400px) {
+    #row6 {
+        display:none;
+    }
+  } 
   
   @keyframes wordleZoom {
     0% {
