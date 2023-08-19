@@ -33,7 +33,7 @@
 
 /* Styling so that the wave divider works */
 #section-spacer {
-    min-height: 25vh;
+    height: 25vh;
     background: #efebdc;
     margin-top: -8vh;
     z-index: 2
@@ -178,3 +178,48 @@ content area .portfolio-modal {
   .modal-header {
     border-bottom: none;
   }
+
+  .animate-proj {
+    animation-duration: 0.8s;
+    animation-delay: 0s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    /* animation-fill-mode: backwards; */
+  }
+  
+  /* Glow In */
+  .animate-proj.glow {
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes animate-glow {
+    0% {
+      opacity: 0;
+      transform: scale(0.8, 0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+
+  #proj_container {
+    margin-top: -8vh;
+  }
+
+  @media screen and (max-width: 1240px) {
+    #proj_container {
+      margin-top: 5vh;
+    }
+  } 
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #proj_container {
+        margin-top: 5vh;
+      }
+  }
+  
+
+  

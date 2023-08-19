@@ -1,12 +1,13 @@
 a {
     text-decoration: none;
-    color: inherit; /* Use the parent element's color */
-  }
-  
-  a:hover{
+    color: inherit;
+    /* Use the parent element's color */
+}
+
+a:hover {
     color: #7e9cce;
-  }
-  
+}
+
 
 #trav_screen {
     min-height: 100vh;
@@ -14,7 +15,7 @@ a {
     align-items: center;
     text-align: center;
     background: #efebdc;
-    display:flex;
+    display: flex;
 
     /*Font*/
     font-family: 'Open Sans', sans-serif;
@@ -38,6 +39,7 @@ a {
     border-radius: 10px !important;
     overflow: hidden;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -52,7 +54,8 @@ th {
     border: 1px solid #464646 !important;
     text-align: left;
     padding: 8px;
-    margin: 0; /* Add this line to remove the margin */
+    margin: 0;
+    /* Add this line to remove the margin */
 }
 
 th {
@@ -101,7 +104,7 @@ tr {
 
 /*removes blue box when btn is clicked */
 .trav_btn:focus {
-    outline:none
+    outline: none
 }
 
 /**
@@ -195,3 +198,54 @@ tr {
         transform: rotate(0deg);
     }
 }
+
+@keyframes popTable {
+    0% {
+        transform: scale(0);
+        opacity: 0%;
+    }
+
+
+    100% {
+        transform: scale(1.0);
+        opacity: 100%;
+    }
+}
+
+.tableAnimate {
+    animation-name: popTable;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes travelLeft {
+    0% {
+        transform: translateX(-300px);
+
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.animateTravel {
+    animation-name: travelLeft;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+#trav_container {
+    margin-top: -20vh;
+}
+@media screen and (max-width: 1240px) {
+    #trav_container {
+      margin-top: 8vh;
+    }
+  } 
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #trav_container {
+        margin-top: 7vh;
+      }
+  }
