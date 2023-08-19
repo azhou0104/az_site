@@ -34,16 +34,25 @@ svg {
   display: block;
 }
 
-/* .row {
-  border: 1px solid black;
+@keyframes moveDown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0%;
 }
 
-.col {
-  border: 1px solid black;
-} */
 
+100% {
+    transform: translateY(0px);
+    opacity: 100%;
+}
+}
 
-/* .container {
-  position: relative;
-  width: 70%
-} */
+.animate-header {
+  animation-name: moveDown;
+  animation-duration: 0.5s;
+  
+}
+
+.header {
+  font-weight:bold;
+}

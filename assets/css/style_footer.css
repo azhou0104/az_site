@@ -1,13 +1,26 @@
 #footer {
     margin-top: -2vh;
-    height: 10em;
+    min-height: 10em;
     text-align: center;
     background-color: #8cb995;
+    display:flex;
 }
 
 
-#copyright {
+#brand {
     color: #ede7da;
     font-size: 14px;
 }
 
+.social {
+    font-size: 3rem;
+    opacity: 85%;
+    color:#efebdc;
+    display:inline-block;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+
+  .social:hover {
+    color:#e3dbbc;;
+  }

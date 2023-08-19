@@ -15,6 +15,8 @@ const observer = new IntersectionObserver((entries) => {
             }
             else if (entry.target.classList.contains('travel_txt_class')) {
                 entry.target.classList.add('animateTravel')
+            }  else if (entry.target.classList.contains('header')) {
+                entry.target.classList.add('animate-header')
             }
         } else {
             if (entry.target.classList.contains('about-txt')) {
@@ -26,6 +28,8 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.remove('animateTravel')
             }else if (entry.target.classList.contains('glow')) {
                 entry.target.classList.remove('animate-proj')
+            }else if (entry.target.classList.contains('round-table')) {
+                entry.target.classList.remove('tableAnimate')
             }
         }
     });
