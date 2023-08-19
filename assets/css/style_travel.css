@@ -265,3 +265,46 @@ tr {
         margin-top: 7vh;
       }
   }
+
+  @keyframes glowTable {
+    0% {
+      filter: brightness(1.5) ;
+      blur:5px;
+    }
+    100% {
+      filter: brightness(1) saturate(1);
+    }
+  }
+
+  .tableGlow {
+    animation-name: glowTable;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+  }
+
+  /* #next_btn {
+
+    transition:0s 1s;
+  }
+
+  @keyframes extendActiveState {
+    0%, 100% {
+    }
+    50% {
+    }
+}
+
+  #next_btn:active {
+    animation: extendActiveState 1.5s;
+  }
+  body:has(#next_btn:enabled:active) #table_glow{   animation-name: glowTable;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+    transition: 0s; }
+
+     body:has(#prev_btn:enabled:active) #table_glow{   animation-name: glowTable;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+ */
+    

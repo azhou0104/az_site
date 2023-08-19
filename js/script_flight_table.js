@@ -40,6 +40,8 @@ const prev_icon = document.getElementById('prev_icon')
 const next_icon = document.getElementById('next_icon')
 const prev_span = document.getElementById('prev_span')
 const next_span = document.getElementById('next_span');
+
+flight_table = document.getElementsByClassName("round-table");
 function showFlights(move) {
   if (move == "next") {
     ++table_index;
@@ -70,6 +72,17 @@ function showFlights(move) {
   } else {
     prev_btn.disabled = false;
   }
+
+
+  // flight_table[0].classList.add('tableGlow')
+  // if ( flight_table[0].classList.contains('tableGlow')) {
+  //   console.log('glow')
+  //   flight_table[0].classList.remove('tableGlow')
+  //   flight_table[0].classList.add('tableGlow')
+  // } else {
+
+  //   flight_table[0].classList.add('tableGlow')
+  // }
   time_cells.forEach((cell, index) => {
     cell.textContent = locations_list[table_index][cell_index].time;
     dest = locations_list[table_index][cell_index].destination;
@@ -90,6 +103,7 @@ function showFlights(move) {
     }
     gate_cells[index].textContent = locations_list[table_index][cell_index].gate;
     cell_index++;
+
   });
 
 }
