@@ -222,4 +222,8 @@ content area .portfolio-modal {
   }
   
 
- 
+ .portfolio-link {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+ }
