@@ -175,6 +175,9 @@ content area .portfolio-modal {
     height: 70%;
   }
   
+  .portfolio-link {
+    will-change: transform;
+  }
   .modal-header {
     border-bottom: none;
   }
@@ -227,3 +230,11 @@ content area .portfolio-modal {
   backface-visibility: hidden;
   
  }
+
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .modal-content{
+    padding: 50px;
+    width: 85%;
+    }
+}
