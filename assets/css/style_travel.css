@@ -27,6 +27,7 @@ a:hover {
     color: #7e9cce;
     font-size: 2.5em;
     letter-spacing: .22rem;
+    font-family: 'Poller One', cursive;
 }
 
 /*table and such */
@@ -88,7 +89,6 @@ tr {
 .travel_txt {
     color: #7e9cce;
     margin-top: 4vh;
-    font-weight: bold;
     letter-spacing: .18rem;
     text-align: left;
     z-index: 5;

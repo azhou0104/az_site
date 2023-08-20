@@ -73,22 +73,12 @@ function showFlights(move) {
     prev_btn.disabled = false;
   }
 
-
-  // flight_table[0].classList.add('tableGlow')
-  // if ( flight_table[0].classList.contains('tableGlow')) {
-  //   console.log('glow')
-  //   flight_table[0].classList.remove('tableGlow')
-  //   flight_table[0].classList.add('tableGlow')
-  // } else {
-
-  //   flight_table[0].classList.add('tableGlow')
-  // }
   time_cells.forEach((cell, index) => {
     cell.textContent = locations_list[table_index][cell_index].time;
     dest = locations_list[table_index][cell_index].destination;
     if (dest.includes('!')) {
       const link = document.createElement('a');
-
+      link.target = '_blank';
 
       city_name = dest.slice(1, dest.indexOf(',')).trim();
       city_country_name = dest.replace('!', '');
