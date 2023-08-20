@@ -257,3 +257,7 @@ content area .portfolio-modal {
     width: 85%;
   }
 }
+
+#c2:hover {
+  color:rgb(89, 136, 225) !important
+}
