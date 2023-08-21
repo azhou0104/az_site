@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries) => {
                 entry.target.classList.add('about-text-animate');
             } else if (entry.target.classList.contains('about-img')) {
                 entry.target.classList.add('about-img-animate');
-            } else if (entry.target.classList.contains('glow')) {
+            } else if (entry.target.classList.contains('spin')) {
                 entry.target.classList.add('animate-proj')
             }else if (entry.target.classList.contains('round-table')) {
                 entry.target.classList.add('tableAnimate')
@@ -26,7 +26,7 @@ const observer = new IntersectionObserver((entries) => {
             }
             else if (entry.target.classList.contains('travel_txt_class')) {
                 entry.target.classList.remove('animateTravel')
-            }else if (entry.target.classList.contains('glow')) {
+            }else if (entry.target.classList.contains('spin')) {
                 entry.target.classList.remove('animate-proj')
             }else if (entry.target.classList.contains('round-table')) {
                 entry.target.classList.remove('tableAnimate')

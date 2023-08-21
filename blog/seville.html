@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seville</title>
+    <link rel="stylesheet" href="./assets/css/style_seville.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+	$(".zoom img").css({
+		transform: 'translate3d(-50%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/5)/100+')'
+	});
+});
+</script>
 </head>
 <body>
-    <p>Hello this is Seville!</p>
+    <header class="zoom" style="height:100vh;">
+        <img src="./assets/imgs/seville.jpg">
+    </header>
+    <main role="main">
+        <div class="content">
+            <h1>Sunny Seville, Spain</h1>
+            <p>To describe Seville succintly, it boasts a scorching sun and is home to the best mushroom risotto restaurant in the world: <a href="https://www.yelp.com/biz/la-brunilda-sevilla" target="_blank"> La Brunilda </a>. </p>	
+
+            <p>I think I spent almost as much money on water as I did on food because Seville was averaging 100 - 105 F when I visited. Still, I explored the city for six hours a day on foot with my water bottle gripped in my hand and sunglasses glued on my face. For some reason I refused to put on sunscreen because I was convinced that my skin would simply tan and not burn (I was wrong). </p>
+
+            <p>Seville had a lot to offer despite the sweltering heat. It was very lively and had plenty of quaint shops packed into cobblestone alleys around the city. My hostel was right near Calle Sierpes, the heart of shopping in Seville. Of course, I was obliged to shop till I dropped.</p>
+
+            <p>Aside from the large shopping scene, Seville also boasts some delicious Tapas and churros. I was most blown away by the mushroom risotto at La Brunilda; for years I swore that the best risotto was in a tiny shop in Zagreb, Croatia, but that title of Best Risotto has since been usurped by Seville in a landslide win. I also discovered that Spanish olives are delicious -- they were the perfect amount of sweet and sour, and were not at all bitter like the ones I had in Greece (controversial take). These were the first olives I've had that didn't make me immediately want to spit them out. In fact, I spent a whole afternoon sitting at the steps of the Cathedral of Seville eating two paper cones full of olives. </p>
+
+            <p> On one of my last days in Seville, I visited Parque de Maria Luisa. It was easily one of my favorite places there. Aside from having the greenery and flora of traditional parks, Maria Luisa was also home to a myriad of large bird ponds. Geese, ducks, and swans (!!) gathered at these pools. It was the perfect place to relax and after walking in the sun all day. </p>
+
+            <div class="container justify-content-center d-flex">
+                <div class="row ">
+                    <div class="col-md-1 mb-5 ">
+                        <img src="./assets/imgs/swans.jpg" style="max-height:200px" class="img-fluid">
+                    </div>
+                    <div class="col-md-1 mb-5">
+                        <img src="./assets/imgs/flowers.jpg" style="max-height:200px" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    
 </body>
 </html>

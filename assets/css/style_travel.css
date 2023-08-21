@@ -1,7 +1,6 @@
 a {
     text-decoration: none;
     color: inherit;
-    /* Use the parent element's color */
 }
 
 a:hover {
@@ -19,7 +18,7 @@ a:hover {
 
     /*Font*/
     font-family: 'Open Sans', sans-serif;
-    margin-top:-1px;
+    margin-top: -1px;
 }
 
 
@@ -111,7 +110,6 @@ tr {
 /**
  * Paper Plane
  */
-/*Paper Plane: Container*/
 .plane-container {
 
     width: 200px;
@@ -201,21 +199,6 @@ tr {
 }
 
 @keyframes popTable {
-    /* 0% {
-        transform: rotateY(0);
-    }
-    
-    45% {
-        transform: rotateY(90deg);
-    }
-    
-    55% {
-        transform: rotateY(90deg);
-    }
-    
-    100% {
-        transform: rotateXY(0);
-    } */
     0% {
         transform: translateY(-200px);
         opacity: 0%;
@@ -228,6 +211,7 @@ tr {
     }
 }
 
+/*Table animation*/
 .tableAnimate {
     animation-name: popTable;
     animation-duration: 0.5s;
@@ -250,61 +234,21 @@ tr {
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
+
 #trav_container {
     margin-top: -20vh;
 }
+
 @media screen and (max-width: 1240px) {
     #trav_container {
-      margin-top: 8vh;
-    }
-  } 
-
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    #trav_container {
-        margin-top: 7vh;
-      }
-  }
-
-  @keyframes glowTable {
-    0% {
-      filter: brightness(1.5) ;
-      blur:5px;
-    }
-    100% {
-      filter: brightness(1) saturate(1);
-    }
-  }
-
-  .tableGlow {
-    animation-name: glowTable;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-  }
-
-  /* #next_btn {
-
-    transition:0s 1s;
-  }
-
-  @keyframes extendActiveState {
-    0%, 100% {
-    }
-    50% {
+        margin-top: 8vh;
     }
 }
 
-  #next_btn:active {
-    animation: extendActiveState 1.5s;
-  }
-  body:has(#next_btn:enabled:active) #table_glow{   animation-name: glowTable;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+@media only screen and (max-width: 768px) {
 
-    transition: 0s; }
-
-     body:has(#prev_btn:enabled:active) #table_glow{   animation-name: glowTable;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out; }
- */
-    
+    /* For mobile phones: */
+    #trav_container {
+        margin-top: 7vh;
+    }
+}

@@ -8,23 +8,6 @@
 
 }
 
-.container3 {
-  display: grid;
-  grid-template-rows: 100px 400px 400px;
-  grid-template-columns: 400px 400px 400px;
-  grid-row-gap: 20px;
-  justify-content: center;
-  margin-top: -8vh;
-  position: relative;
-}
-
-
-.header3 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-
 #proj_header {
   color: #e46c80;
   font-size: 2.5em;
@@ -32,15 +15,7 @@
   font-family: 'Poller One', cursive;
 }
 
-/* Styling so that the wave divider works */
-#section-spacer {
-  height: 25vh;
-  background: #efebdc;
-  margin-top: -8vh;
-  z-index: 2
-}
-
-
+/*Spacer so that SVG divider works*/
 .spacer {
   aspect-ratio: 960/300;
   width: 100%;
@@ -85,44 +60,31 @@ content area .portfolio-modal {
 #portfolio_btn5,
 #portfolio_btn6 {
   background: none;
-  /* Remove background */
   border: none;
-  /* Remove border */
   padding: 0;
-  /* Remove padding */
 }
 
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 10% auto;
-  /* 15% from the top and centered */
   padding: 100px;
   border: 1px solid #888;
   width: 60%;
-  /* Could be more or less, depending on screen size */
   justify-content: center;
   text-align: center;
 
@@ -169,7 +131,6 @@ content area .portfolio-modal {
 
 /*modal box size*/
 .portfolio-modal .modal-dialog {
-  /*    Full screen style*/
   max-width: 100%;
   max-height: 100%;
   width: 70%;
@@ -186,19 +147,16 @@ content area .portfolio-modal {
 
 .animate-proj {
   animation-duration: 1s;
-  animation-delay: 0s;
-  animation-name: animate-fade;
-  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-  /* animation-fill-mode: backwards; */
+  animation-delay: 0s
 }
 
-/* Glow In */
-.animate-proj.glow {
-  animation-name: animate-glow;
+/* Spin In */
+.animate-proj.spin {
+  animation-name: animate-spin;
   animation-timing-function: ease;
 }
 
-@keyframes animate-glow {
+@keyframes animate-spin {
   0% {
     transform: rotateY(0);
   }
@@ -214,15 +172,6 @@ content area .portfolio-modal {
   100% {
     transform: rotateY(0);
   }
-
-  /* 0% {
-      opacity: 0;
-      transform: scale(0.6, 0.6);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    } */
 }
 
 #proj_container {
@@ -243,15 +192,7 @@ content area .portfolio-modal {
   }
 }
 
-
-.portfolio-link {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-}
-
 @media only screen and (max-width: 768px) {
-
   /* For mobile phones: */
   .modal-content {
     padding: 50px;

@@ -4,17 +4,18 @@
     align-items: center;
     text-align: center;
     background: rgb(128, 141, 214);
-    display:flex;
+    display: flex;
 
     /*Font*/
     font-family: 'Open Sans', sans-serif;
     color: #c3dcdf;
-   
+
 }
 
 #about_header {
     font-family: 'Poller One', cursive;
 }
+
 .resume_btn {
     font-size: 1rem;
     letter-spacing: .1rem;
@@ -49,8 +50,9 @@
 }
 
 #about_text {
-    font-size:1.5em;
+    font-size: 1.5em;
 }
+
 #about_trav_description {
     color: #c3dcdf;
     font-size: 1em;
@@ -60,13 +62,15 @@
     background-image: url('../svgs/layer_wave.svg');
 }
 
+/*Animation for about text*/
 @keyframes aboutSlideInLeft {
     from {
-        transform:translateX(-300px);
+        transform: translateX(-300px);
     }
 
     to {
-        transform:translateX(0); /*back to og position*/
+        transform: translateX(0);
+        /*back to og position*/
     }
 }
 
@@ -76,12 +80,14 @@
     animation-timing-function: ease-in-out;
 }
 
+/*Animation for about image*/
 @keyframes aboutSlideInRight {
     from {
         transform: translateX(300px);
         opacity: 0%;
 
     }
+
     to {
         transform: translateX(0);
         opacity: 100%;
@@ -95,19 +101,19 @@
 }
 
 #about_container {
-    margin-top:0;
+    margin-top: 0;
 }
 
+/*Page responsiveness*/
 @media screen and (max-width: 1240px) {
     #about_container {
-      margin-top: 6vh;
+        margin-top: 6vh;
     }
-  } 
+}
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     /* For mobile phones: */
     #about_container {
         margin-top: 6vh;
-      }
-  }
-  
+    }
+}

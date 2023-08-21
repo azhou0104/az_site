@@ -1,24 +1,24 @@
 <html>
 
 <head>
-
   <script src="https://kit.fontawesome.com/4d451af502.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <!--SEO meta tags-->
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
-  <meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
 
-  <!--    Change the index to your website's name-->
+  <!-- Prevent caching for github pages-->
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
   <title>Zannie </title>
+
   <!-- Bootstrap Core CSS ––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+
   <!--CSS STYLE SHEETS-->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/style_splash.css">
@@ -26,24 +26,28 @@
   <link rel="stylesheet" href="./assets/css/style_travel.css">
   <link rel="stylesheet" href="./assets/css/style_proj.css">
   <link rel="stylesheet" href="./assets/css/style_footer.css">
-  <script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
+
+  <!--Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@300;700&family=Poller+One&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@300;700&family=Poller+One&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+
+  <!--NAVIGATION BAR-->
   <div id="nav">
     <a href="#splash_screen" class="nav-item right">ANNIE ZHOU</a>
-
     <a href="#footer" class="nav-item left">CONTACT</a>
     <a href="#trav_screen" class="nav-item left">TRAVEL BLOG</a>
-
     <a href="#projects_screen" class="nav-item left">PROJECTS</a>
     <a href="#about_screen" class="nav-item left">ABOUT</a>
   </div>
 
   <div id="page-content">
+    <!--HOME SPLASH SCREEN-->
     <section id="splash_screen">
       <div class="container splash_animate">
         <div class="row rows" id="row1">
@@ -99,15 +103,11 @@
     <section id="about_screen" style="margin-top: -1px;">
       <div class="container" id="about_container" style="width:85%;">
         <div class="row">
-          <div class="col-md-1">
-
-          </div>
+          <div class="col-md-1"> </div>
           <div class="col-md-10 header onScroll">
             <h1 id="about_header" style="margin-bottom: 12vh;">hello, world</h1>
           </div>
-          <div class="col-md-1">
-
-          </div>
+          <div class="col-md-1"> </div>
         </div>
         <div class="row" style="padding-bottom:2vh">
           <div class="col-md-6 onScroll about-txt">
@@ -161,10 +161,10 @@
 
           <!--Project1-->
           <div class="col-md-4 mb-5">
-            <button class="portfolio-link onScroll glow" id="portfolio_btn1"> <!-- Changed id to portfolio_btn2 -->
+            <button class="portfolio-link onScroll spin" id="portfolio_btn1">
               <img src="./assets/img/mobile.png" style="max-height:300px" class="img-fluid">
             </button>
-            <div id="modal-portfolio1" class="modal"> <!-- Changed id to modal-portfolio2 -->
+            <div id="modal-portfolio1" class="modal">
               <div class="modal-content">
                 <div class="modal-header justify-content-end">
                   <button type="button" class="close" aria-label="Close">
@@ -185,8 +185,8 @@
                         organizers can create profiles to market their hosted events. </p>
                       <p> The app also implements the Ticketmaster API to retrieve larger-scale
                         events. </p>
-                        <i> Built with Flutter, Dart, Typescript, Firebase cloud functions, and
-                          Firestore.</i>
+                      <i> Built with Flutter, Dart, Typescript, Firebase cloud functions, and
+                        Firestore.</i>
                     </div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@
 
           <!--Project2-->
           <div class="col-md-4 mb-5">
-            <button class="portfolio-link onScroll glow" id="portfolio_btn2"> <!-- Changed id to portfolio_btn2 -->
+            <button class="portfolio-link onScroll spin" id="portfolio_btn2"> <!-- Changed id to portfolio_btn2 -->
               <img src="./assets/img/wordle.png" style="max-height:300px" class="img-fluid">
             </button>
             <div id="modal-portfolio2" class="modal"> <!-- Changed id to modal-portfolio2 -->
@@ -214,12 +214,13 @@
                     </div>
                     <div class="col-md-6" style="text-align:left">
                       <h2> Wordle </h2>
-                      <p> My friend loves Wordle, so I made this for their birthday. </p> <p>I noticed that
+                      <p> My friend loves Wordle, so I made this for their birthday. </p>
+                      <p>I noticed that
                         Wordle can only be
                         played online, so I wanted to make a version that could be played through a
                         computer's terminal—
-                        this way, they could play the game offline, anytime and anywhere.</p> 
-                        <br>
+                        this way, they could play the game offline, anytime and anywhere.</p>
+                      <br>
                       <i> Built with Python and Shellscript. </i>
                     </div>
                   </div>
@@ -231,7 +232,7 @@
           <!--Project3-->
           <div class="col-md-4 mb-5">
             <!--Project Image Button-->
-            <button class="portfolio-link onScroll glow" id="portfolio_btn3">
+            <button class="portfolio-link onScroll spin" id="portfolio_btn3">
               <img src="./assets/img/press.png" style="max-height:300px" class="img-fluid">
             </button>
 
@@ -254,15 +255,18 @@
                     <div class="col-md-6" style="text-align:left">
                       <h2> PressTest </h2>
                       <p>Another independent contractor project; I built a python Flask webapp from the ground-
-                        up for <a id="c2" href="https://sidlee.com/en/" target="_blank" style="color:rgb(180, 102, 176);">Sid Lee</a>, a
+                        up for <a id="c2" href="https://sidlee.com/en/" target="_blank"
+                          style="color:rgb(180, 102, 176);">Sid Lee</a>, a
                         large creative agency in Montreal.</p>
                       <p>The webapp performs context and sentiment analysis on article pitches based
                         on a developed rubric
                         and outputs a score. It also outputs suggestions for improvement, and is
                         available in English and
                         French.
-                        This app was presented at the <a id="c2" href="https://c2montreal.com/" target="_blank" style="color:rgb(180, 102, 176);">C2 Conference</a> in Montreal. </p>
-                      <i>Built with Flask, Python, HTML/CSS/Javascript, deployed on AWS Elastic Beanstalk and AWS Codepipeline.</i>
+                        This app was presented at the <a id="c2" href="https://c2montreal.com/" target="_blank"
+                          style="color:rgb(180, 102, 176);">C2 Conference</a> in Montreal. </p>
+                      <i>Built with Flask, Python, HTML/CSS/Javascript, deployed on AWS Elastic Beanstalk and AWS
+                        Codepipeline.</i>
                     </div>
                   </div>
                 </div> <!--End Inside of Modal-->
@@ -274,7 +278,7 @@
         <!--Project4-->
         <div class="row mb-5 justify-content-center">
           <div class="col-md-4 mb-5">
-            <button class="portfolio-link onScroll glow" id="portfolio_btn4"> <!-- Changed id to portfolio_btn2 -->
+            <button class="portfolio-link onScroll spin" id="portfolio_btn4"> <!-- Changed id to portfolio_btn2 -->
               <img src="./assets/img/cheers.png" style="max-height:300px" class="img-fluid">
             </button>
             <div id="modal-portfolio4" class="modal"> <!-- Changed id to modal-portfolio2 -->
@@ -292,7 +296,9 @@
                     </div>
                     <div class="col-md-6" style="text-align:left">
                       <h2> Cheers </h2>
-                      <p> During the Covid pandemic, I worked with a team to design and implement a video-chatting interface in order to make connecting with family and friends easier to navigate for senior citizens. </p>
+                      <p> During the Covid pandemic, I worked with a team to design and implement a video-chatting
+                        interface in order to make connecting with family and friends easier to navigate for senior
+                        citizens. </p>
                       <i> Built with the Zoom SDK, C++, and XML. </i>
                     </div>
                   </div>
@@ -303,7 +309,7 @@
 
           <!--Project5-->
           <div class="col-md-4 mb-5">
-            <button class="portfolio-link onScroll glow " id="portfolio_btn5"> <!-- Changed id to portfolio_btn2 -->
+            <button class="portfolio-link onScroll spin " id="portfolio_btn5"> <!-- Changed id to portfolio_btn2 -->
               <img src="./assets/img/insta.png" style="max-height:300px" class="img-fluid">
             </button>
             <div id="modal-portfolio5" class="modal"> <!-- Changed id to modal-portfolio2 -->
@@ -346,7 +352,7 @@
 
           <!--Project6-->
           <div class="col-md-4 mb-5">
-            <button class="portfolio-link onScroll glow" id="portfolio_btn6"> <!-- Changed id to portfolio_btn2 -->
+            <button class="portfolio-link onScroll spin" id="portfolio_btn6"> <!-- Changed id to portfolio_btn2 -->
               <img src="./assets/img/site.png" style="max-height:300px" class="img-fluid">
             </button>
             <div id="modal-portfolio6" class="modal"> <!-- Changed id to modal-portfolio2 -->
@@ -364,7 +370,8 @@
                     <div class="col-md-6" style="text-align:left">
                       <h2> This Site! </h2>
                       <p> I created this website from scratch with pure HTML, CSS, and
-                        Javascript. Through this project, I learned a lot about building responsive websites. </p> <p>I wanted to create a fun website to showcase some of my work,
+                        Javascript. Through this project, I learned a lot about building responsive websites. </p>
+                      <p>I wanted to create a fun website to showcase some of my work,
                         but also as a way to blog about my travels! </p>
                     </div>
                   </div>
@@ -377,7 +384,6 @@
 
 
     <div class="spacer wave2"></div>
-    <!-- <section id="section-spacer"></section> -->
 
     <!--TRAVEL PAGE-->
     <section id="trav_screen">
@@ -399,8 +405,7 @@
           </div>
           <div class="col-md-6 justify-content-center align-content-center">
             <div class="round-table onScroll">
-              <table class="table round-table" id="table_glow">
-
+              <table class="table round-table">
                 <thead>
                   <tr>
                     <th colspan="3">
@@ -431,7 +436,7 @@
                   <td>9:32</td>
                   <td class="td-dest">
                     Seville, Spain
-                      <!-- <a href="./blog/seville.html"> Seville, Spain</a> -->
+                    <!-- <a href="./blog/seville.html"> Seville, Spain</a> -->
                   </td>
                   <td>A12</td>
                   </tr>
