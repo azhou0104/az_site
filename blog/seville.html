@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seville</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style_seville.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-	$(".zoom img").css({
-		transform: 'translate3d(-50%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/5)/100+')'
-	});
-});
-</script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@300;700&family=Poller+One&family=Poppins:wght@100&family=Source+Code+Pro:wght@300&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
 </head>
 <body>
-    <header class="zoom" style="height:100vh;">
-        <img src="./assets/imgs/seville.jpg">
+    <header class="zoom" style="height:100vh; display:flex; justify-content: center; ">
+        <img src="./assets/imgs/seville.jpg" style="height:100%;object-fit: cover;z-index: -1;">
+        <p id="scroll" >Scroll <span class="material-symbols-outlined">
+            arrow_downward
+            </span></p>
+        
     </header>
     <main role="main">
         <div class="content">
-            <h1>Sunny Seville, Spain</h1>
-            <p>To describe Seville succintly, it boasts a scorching sun and is home to the best mushroom risotto restaurant in the world: <a href="https://www.yelp.com/biz/la-brunilda-sevilla" target="_blank"> La Brunilda </a>. </p>	
+            <h1 style="text-align: center; color: rgb(192, 90, 65); margin-top: 3vh;">Sunny Seville, Spain</h1>
+            <br>
+            <p>To describe Seville succintly, it boasts a scorching sun and is home to the best mushroom risotto restaurant in the world: <a href="https://www.yelp.com/biz/la-brunilda-sevilla" target="_blank" style="color:rgb(192, 90, 65)"> La Brunilda </a>. </p>	
 
-            <p>I think I spent almost as much money on water as I did on food because Seville was averaging 100 - 105 F when I visited. Still, I explored the city for six hours a day on foot with my water bottle gripped in my hand and sunglasses glued on my face. For some reason I refused to put on sunscreen because I was convinced that my skin would simply tan and not burn (I was wrong). </p>
+            <p>I think I spent almost as much money on water as I did on food because Seville averaged 100 to 105°F when I visited. Nonetheless, I explored the city on foot for six hours a day, with my water bottle gripped in my hand and sunglasses glued to my face. For some reason, I refused to put on sunscreen because I was convinced that my skin would simply tan and not burn (I was wrong). </p>
 
-            <p>Seville had a lot to offer despite the sweltering heat. It was very lively and had plenty of quaint shops packed into cobblestone alleys around the city. My hostel was right near Calle Sierpes, the heart of shopping in Seville. Of course, I was obliged to shop till I dropped.</p>
+            <p>Seville had a lot to offer despite the sweltering heat. It was lively and had plenty of quaint shops packed into cobblestone alleys around the city. My hostel was right near Calle Sierpes, the heart of shopping in Seville. Of course, I was obliged to shop till I dropped. </p>
 
-            <p>Aside from the large shopping scene, Seville also boasts some delicious Tapas and churros. I was most blown away by the mushroom risotto at La Brunilda; for years I swore that the best risotto was in a tiny shop in Zagreb, Croatia, but that title of Best Risotto has since been usurped by Seville in a landslide win. I also discovered that Spanish olives are delicious -- they were the perfect amount of sweet and sour, and were not at all bitter like the ones I had in Greece (controversial take). These were the first olives I've had that didn't make me immediately want to spit them out. In fact, I spent a whole afternoon sitting at the steps of the Cathedral of Seville eating two paper cones full of olives. </p>
+            <p>Apart from the bustling shopping scene, Seville also offers delicious tapas and churros. I was most blown away by the mushroom risotto at La Brunilda; for years I had sworn that the best risotto was in a tiny shop in Zagreb, Croatia, but that title of "Best Risotto" has since been usurped by Seville in a landslide victory. I also discovered that Spanish olives are delicious — they had the perfect balance of sweetness and sourness and were not at all bitter like the ones I had in Greece (sorry Greece). These were the first olives I've had that didn't make me immediately want to spit them out. In fact, I spent a whole afternoon sitting on the steps of the Cathedral of Seville, eating two paper cones full of olives.</p>
 
-            <p> On one of my last days in Seville, I visited Parque de Maria Luisa. It was easily one of my favorite places there. Aside from having the greenery and flora of traditional parks, Maria Luisa was also home to a myriad of large bird ponds. Geese, ducks, and swans (!!) gathered at these pools. It was the perfect place to relax and after walking in the sun all day. </p>
+            <div class="container justify-content-center" style="display:flex; text-align: center">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mt-5 mb-5 justify-content-center">
+                        <img src="./assets/imgs/church.jpg" style="max-height:450px" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <p> On one of my final days in Seville, I visited Parque de Maria Luisa. It was easily one of my favorite places there. Apart from having the greenery and flora of traditional parks, Maria Luisa was also home to a myriad of large bird ponds where geese, ducks, and swans (!!) gathered. It was the perfect place to relax after walking in the sun all day.</p>
 
             <div class="container justify-content-center d-flex">
-                <div class="row ">
-                    <div class="col-md-1 mb-5 ">
-                        <img src="./assets/imgs/swans.jpg" style="max-height:200px" class="img-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 mb-5 mt-5 justify-content-center">
+                        <img src="./assets/imgs/swans.jpg" style="max-height:350px" class="img-fluid">
                     </div>
-                    <div class="col-md-1 mb-5">
-                        <img src="./assets/imgs/flowers.jpg" style="max-height:200px" class="img-fluid">
+                    <div class="col-md-6 mb-5 mt-5">
+                        <img src="./assets/imgs/flowers.jpg" class="img-fluid" style="max-height:350px" >
                     </div>
                 </div>
             </div>
@@ -48,4 +61,14 @@
     
     
 </body>
+<script>
+    let txt = document.getElementById("scroll")
+    $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+        txt.classList.add("hidden")
+	$(".zoom img").css({
+		transform: 'translate3d(-50%, -'+(scroll/100)+'%, 0) scale('+(100 + scroll/5)/100+')'
+	});
+});
+</script>
 </html>

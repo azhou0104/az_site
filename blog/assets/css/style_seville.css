@@ -5,16 +5,19 @@ body{
 	font-size: 1.4rem;
 	line-height: 2rem;
 }
-a{color: #000;}
+a:hover {
+	color:rgb(226, 126, 55) !important;
+}
 h1{
 	font-size: 2.6rem;
 	line-height: 2.6rem;
 }
 .content{
-	margin: 0 auto;
+	margin: 0;
 	max-width: 90%;
 	width: 720px;
     justify-content: center;
+	/* display:flex; */
 }
 main{
 	padding: 1% 0;
@@ -22,6 +25,8 @@ main{
 	background: #f5f5f5;
 	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
 		height: 100%;
+	justify-content: center;
+	display:flex;
 }
 footer p{
 	font-size: .8rem;
@@ -63,4 +68,16 @@ footer a{color: #ccc;}
 		padding-bottom: 75%;
 	}
 
+}
+
+#scroll {
+	z-index:1;
+	bottom: 0;
+	position:absolute;
+	font-family: 'Poller One', cursive;
+	color:rgb(212, 71, 39);
+}
+
+.hidden {
+	display:none;
 }

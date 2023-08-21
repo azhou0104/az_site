@@ -9,10 +9,6 @@ body, html {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* a {
-  text-decoration: none;
-  color: inherit; /* Use the parent element's color */
-/* } */
 
 a:hover{
   color: #7e9cce;
